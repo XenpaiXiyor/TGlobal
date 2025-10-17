@@ -1,5 +1,37 @@
-// Bilberrry Replica - Interactive JavaScript
+// TGlobal Replica - Interactive JavaScript
 document.addEventListener('DOMContentLoaded', function() {
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    
+    // Set dark theme as default
+    body.setAttribute('data-theme', 'dark');
+    
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            body.setAttribute('data-theme', newTheme);
+            
+            // Save theme preference
+            localStorage.setItem('theme', newTheme);
+            
+            // Update header background
+            const header = document.querySelector('.header');
+            if (header) {
+                if (newTheme === 'light') {
+                    header.style.background = 'rgba(255, 255, 255, 0.95)';
+                } else {
+                    header.style.background = 'rgba(15, 23, 42, 0.95)';
+                }
+            }
+        });
+        
+        // Load saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        body.setAttribute('data-theme', savedTheme);
+    }
+
     // Mobile Navigation Toggle
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
