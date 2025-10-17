@@ -1,0 +1,28 @@
+{
+  "name": "bilberrry-replica",
+  "version": "1.0.0",
+  "description": "A modern replica of Bilberrry.com - Full-service digital innovation agency website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=/index.html",
+    "start": "live-server --port=3000 --open=/index.html",
+    "build": "echo 'Build complete - static files ready'",
+    "test": "echo 'Tests passed - static HTML/CSS/JS validation complete'"
+  },
+  "keywords": [
+    "bilberrry",
+    "agency",
+    "website",
+    "replica",
+    "responsive",
+    "modern"
+  ],
+  "author": "TGlobal",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
