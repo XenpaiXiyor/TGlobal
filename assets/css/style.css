@@ -21,6 +21,35 @@
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
+/* Dark Theme Variables */
+[data-theme="dark"] {
+    --text-primary: #ffffff;
+    --text-secondary: #e2e8f0;
+    --text-muted: #94a3b8;
+    --background: #0f172a;
+    --background-light: #1e293b;
+    --background-dark: #000000;
+    --border-color: #334155;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Set dark theme as default */
+:root,
+body {
+    --text-primary: #ffffff;
+    --text-secondary: #e2e8f0;
+    --text-muted: #94a3b8;
+    --background: #0f172a;
+    --background-light: #1e293b;
+    --background-dark: #000000;
+    --border-color: #334155;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -72,12 +101,47 @@ p {
     background-clip: text;
 }
 
+/* Theme Toggle */
+.theme-toggle {
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.toggle-track {
+    width: 50px;
+    height: 24px;
+    background: var(--border-color);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.toggle-thumb {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="light"] .toggle-thumb {
+    transform: translateX(26px);
+}
+
+.toggle-track:hover {
+    background: var(--primary-color);
+}
+
 /* Header */
 .header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(15, 23, 42, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
@@ -149,10 +213,11 @@ p {
 /* Hero Section */
 .hero {
     padding: 150px 0 100px;
-    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
     text-align: center;
     position: relative;
     overflow: hidden;
+    color: white;
 }
 
 .hero::before {
@@ -162,9 +227,38 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="500" cy="500" r="400" fill="none" stroke="%23e0e7ff" stroke-width="1" opacity="0.3"/><circle cx="500" cy="500" r="300" fill="none" stroke="%23c7d2fe" stroke-width="1" opacity="0.2"/></svg>') center/cover no-repeat;
-    opacity: 0.1;
+    background: 
+        radial-gradient(2px 2px at 20px 30px, #ffffff, transparent),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, transparent),
+        radial-gradient(1px 1px at 90px 40px, #ffffff, transparent),
+        radial-gradient(1px 1px at 130px 80px, #ffffff, transparent),
+        radial-gradient(2px 2px at 160px 30px, #ffffff, transparent),
+        radial-gradient(1px 1px at 200px 60px, #ffffff, transparent),
+        radial-gradient(2px 2px at 250px 90px, #ffffff, transparent),
+        radial-gradient(1px 1px at 300px 20px, #ffffff, transparent),
+        radial-gradient(1px 1px at 350px 50px, #ffffff, transparent),
+        radial-gradient(2px 2px at 400px 80px, #ffffff, transparent);
+    background-repeat: repeat;
+    background-size: 400px 200px;
+    opacity: 0.8;
     pointer-events: none;
+    animation: stars 50s linear infinite;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200"><path d="M0,200 L0,150 C100,140 200,130 300,135 C400,140 500,145 600,140 C700,135 800,125 900,130 C1000,135 1100,145 1200,140 L1200,200 Z" fill="%23000000" opacity="0.8"/></svg>') center bottom/cover no-repeat;
+    pointer-events: none;
+}
+
+@keyframes stars {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-400px); }
 }
 
 .hero-content {
@@ -176,14 +270,14 @@ p {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     padding: 0.75rem 1.5rem;
     border-radius: 50px;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     margin-bottom: 1rem;
     font-weight: 500;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .hero-badge img {
@@ -193,14 +287,14 @@ p {
 
 .hero-subtitle {
     font-size: 1.2rem;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 1rem;
 }
 
 .hero-title {
     font-weight: 800;
     margin-bottom: 2rem;
-    color: var(--text-primary);
+    color: white;
 }
 
 /* Sections */
@@ -556,111 +650,4 @@ section {
 }
 
 .footer-bottom p {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.9rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--background);
-        flex-direction: column;
-        padding: 2rem;
-        box-shadow: var(--shadow-lg);
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-    }
-
-    .nav-menu.active {
-        transform: translateX(0);
-    }
-
-    .nav-toggle {
-        display: flex;
-    }
-
-    .hero {
-        padding: 120px 0 80px;
-    }
-
-    .case-study-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .case-study {
-        padding: 2rem;
-    }
-
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .footer-links {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    section {
-        padding: 60px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 0 16px;
-    }
-
-    .hero-badge {
-        padding: 0.5rem 1rem;
-    }
-
-    .case-study {
-        padding: 1.5rem;
-    }
-
-    .service-category {
-        padding: 2rem;
-    }
-}
-
-/* Loading Animation */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in-up {
-    animation: fadeInUp 0.6s ease-out forwards;
-}
-
-/* Smooth transitions */
-* {
-    transition: all 0.3s ease;
-}
-
-/* Focus states for accessibility */
-button:focus,
-a:focus,
-input:focus {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
-}
+    color
