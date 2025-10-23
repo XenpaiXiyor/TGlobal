@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bilberrry - A Full-Service Digital Innovation Agency</title>
-    <meta name="description" content="We design and develop digital products and online experiences that help clients grow, innovate, and transform.">
+    <title>TGlobal - A Full-Service Digital Innovation Agency</title>
+    <meta name="description" content="TGlobal designs and develops digital products and online experiences that help clients grow, innovate, and transform.">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="theme-dark">
-    <!-- Header -->
     <header id="header" class="site-header">
         <div class="container site-header__inner">
-            <a href="#hero-section" class="site-header__brand" aria-label="Bilberrry">
-                <img src="assets/images/bilberrry-logo.svg" alt="Bilberrry" class="brand-logo">
+            <a href="#hero-section" class="site-header__brand" aria-label="TGlobal home">
+                <span class="brand-mark">T<span>Global</span></span>
             </a>
             <nav class="primary-nav" aria-label="Primary navigation">
                 <ul class="primary-nav__list">
@@ -27,7 +25,7 @@
                 </ul>
             </nav>
             <div class="site-header__actions">
-                <button id="themeToggle" class="theme-switcher-link" type="button" role="switch" aria-label="Toggle color theme" aria-checked="true"></button>
+                <button id="themeToggle" class="theme-switcher-link" type="button" role="switch" aria-checked="true" aria-label="Toggle color theme"></button>
                 <a href="#contact" class="button button--ghost nav-cta">Start a Project</a>
                 <button class="hamburger" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
                     <span></span>
@@ -38,193 +36,142 @@
         </div>
         <nav id="mobileNav" class="mobile-nav" aria-label="Mobile navigation">
             <ul class="mobile-nav__list">
-                <li><a href="#work" class="mobile-nav__link">Work</a></li>
-                <li><a href="#services" class="mobile-nav__link">Services</a></li>
-                <li><a href="#approach" class="mobile-nav__link">Approach</a></li>
-                <li><a href="#about" class="mobile-nav__link">About</a></li>
-                <li><a href="#contact" class="mobile-nav__link">Contact</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#approach">Approach</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+            <a href="#contact" class="button button--ghost mobile-nav__cta">Start a Project</a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero-section" class="hero">
-        <div class="container hero__inner">
-            <div class="hero__content">
-                <div class="hero__badge">
-                    <img src="assets/images/bb-sky.webp" alt="Bilberrry sky" loading="lazy">
-                    <span>Your Trusted Website &amp; App</span>
-                </div>
-                <p class="hero__subtitle">Development Partner</p>
-                <h1 class="hero__title">
-                    Evolve Your Business<br>
-                    <span>With Bilberrry</span>
-                </h1>
-                <p class="hero__description">
-                    Strategy, design, and technology united to create digital experiences that move brands forward.
-                </p>
-                <div class="hero__actions">
-                    <a href="#work" class="button">Explore Our Work</a>
-                    <a href="#services" class="button button--ghost">What We Do</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section section-text">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="eyebrow">WE ARE BILBERRRY</h2>
-            </div>
-            <div class="section-body section-body--narrow">
-                <p>
-                    We design and develop websites, apps, and digital experiences that help clients grow, innovate, and transform.
-                    We listen, learn, and understand before we build. Together, we define goals and uncover the sweet spot between
-                    realistic and remarkable. That commitment has earned the trust of leading brands, nonprofits, and government
-                    agencies worldwide.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Clients Section -->
-    <section class="section section--muted clients">
-        <div class="container">
-            <div class="clients-grid">
-                <div class="client-logo">
-                    <img src="assets/images/delta-logo.svg" alt="Delta" class="light-theme-only">
-                    <img src="assets/images/delta-logo-dark.svg" alt="Delta" class="dark-theme-only">
-                </div>
-                <div class="client-logo">
-                    <img src="assets/images/university-logo.svg" alt="University of Washington" class="light-theme-only">
-                    <img src="assets/images/university-logo-dark.svg" alt="University of Washington" class="dark-theme-only">
-                </div>
-                <div class="client-logo">
-                    <img src="assets/images/gofundme-logo.png" alt="GoFundMe">
-                </div>
-                <div class="client-logo">
-                    <img src="assets/images/harvard-logo.svg" alt="Harvard"></div>
-                <div class="client-logo">
-                    <img src="assets/images/business-wire-logo.svg" alt="Business Wire">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Philosophy Section -->
-    <section class="section section-text">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="display-heading">
-                    We Believe Great Work<br>
-                    <span>Begins With Curiosity</span>
-                </h2>
-                <p class="section-subtitle">
-                    Big transformations start with simple questions. Our clients ask, we listen, and together we uncover the path forward.
-                    Whether rethinking a platform, elevating a brand, or reaching new audiences, every project begins by exploring the why.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Studies Section -->
-    <section class="section case-studies" id="work">
-        <div class="container">
-            <article class="case-study">
-                <div class="case-study__badge">
-                    <img src="assets/images/business-wire-logo.svg" alt="Business Wire" class="light-theme-only">
-                    <img src="assets/images/business-wire-logo.svg" alt="Business Wire" class="dark-theme-only">
-                </div>
-                <div class="case-study__content">
-                    <p class="case-study__eyebrow">Asked us:</p>
-                    <h3 class="case-study__title">What is the right way to transform our tech?</h3>
-                    <p>When you know what you need but aren’t sure how to get there, we go all-in to uncover the approach that will get your business where you want it to go.</p>
-                    <a href="#" class="case-study__link">Here’s how we helped a global media brand modernize its tech stack.</a>
-                </div>
-            </article>
-
-            <article class="case-study case-study--invert">
-                <div class="case-study__badge">
-                    <img src="assets/images/gofundme-logo.png" alt="GoFundMe" class="light-theme-only">
-                    <img src="assets/images/gofundme-logo.png" alt="GoFundMe" class="dark-theme-only">
-                </div>
-                <div class="case-study__content">
-                    <p class="case-study__eyebrow">Wanted to know:</p>
-                    <h3 class="case-study__title">Can you enhance our web presence?</h3>
-                    <p>When it comes to digital experiences, we can build almost anything. And if there’s a better solution, we’ll tell you. We always start with why, using the answer to drive meaningful transformation.</p>
-                    <a href="#" class="case-study__link">See what we designed for a global non-profit.</a>
-                </div>
-            </article>
-
-            <article class="case-study">
-                <div class="case-study__badge">
-                    <img src="assets/images/ppg-logo.svg" alt="PPG" class="light-theme-only">
-                    <img src="assets/images/ppg-logo.svg" alt="PPG" class="dark-theme-only">
-                </div>
-                <div class="case-study__content">
-                    <p class="case-study__eyebrow">Wondered:</p>
-                    <h3 class="case-study__title">Can one site support many missions?</h3>
-                    <p>By pairing thoughtful strategy with design that connects people to causes, the answer is yes. It’s how we helped PPG elevate their mission across audiences.</p>
-                    <a href="#" class="case-study__link">Explore how we crafted a scalable platform for public good.</a>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="section testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">THE REVIEWS ARE REAL (AND REALLY GOOD)</h2>
-                <p class="section-subtitle">
-                    From startups to global organizations, our clients consistently rate us 5 stars for creativity, collaboration, and results.
-                </p>
-                <a href="#" class="cta-link">Read our verified reviews</a>
-            </div>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial">
-                    <blockquote>
-                        "They approached the project not simply as developers, but as partners—invested in understanding our business."
-                    </blockquote>
-                    <cite>
-                        <strong>Sands Investment Group</strong><br>
-                        Director of Operations
-                    </cite>
-                </div>
-                
-                <div class="testimonial">
-                    <blockquote>
-                        "Bilberrry was an amazing partner throughout the whole process. They were also a pleasure to work with."
-                    </blockquote>
-                    <cite>
-                        <strong>Snohomish County PUD</strong><br>
-                        Communications Director
-                    </cite>
-                </div>
-                
-                <div class="testimonial">
-                    <blockquote>
-                        "In 18 years of working with many digital agencies, I never found an organization that was as effective as they are."
-                    </blockquote>
-                    <cite>
-                        <strong>The Life You Can Save</strong><br>
-                        Executive Director Emeritus
-                    </cite>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="section services" id="services">
-        <div class="container">
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-card__icon">
-                        <img src="assets/images/business-wire-logo.svg" alt="Icon" loading="lazy">
+    <main>
+        <section id="hero-section" class="hero">
+            <div class="container hero__grid">
+                <div class="hero__content">
+                    <div class="hero__badge">
+                        <span>Your Trusted Website &amp; App</span>
                     </div>
+                    <p class="hero__subtitle">Development Partner</p>
+                    <h1 class="hero__title">Evolve Your Business<br><span>With TGlobal</span></h1>
+                    <p class="hero__description">Strategy, design, and technology united to create digital experiences that move brands forward.</p>
+                    <div class="hero__actions">
+                        <a href="#work" class="button">Explore Our Work</a>
+                        <a href="#services" class="button button--ghost">What We Do</a>
+                    </div>
+                </div>
+                <div class="hero__visual" aria-hidden="true">
+                    <div class="hero__orb"></div>
+                    <div class="hero__ring hero__ring--one"></div>
+                    <div class="hero__ring hero__ring--two"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section section-text">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="eyebrow">WE ARE TGLOBAL</h2>
+                </div>
+                <div class="section-body section-body--narrow">
+                    <p>We design and develop websites, apps, and digital experiences that help clients grow, innovate, and transform. We listen, learn, and understand before we build. Together, we define goals and uncover the sweet spot between realistic and remarkable. That commitment has earned the trust of leading brands, nonprofits, and government agencies worldwide.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--muted clients">
+            <div class="container">
+                <div class="clients-grid">
+                    <div class="client-logo">
+                        <img src="assets/images/delta-logo.svg" alt="Delta" class="light-theme-only">
+                        <img src="assets/images/delta-logo-dark.svg" alt="Delta" class="dark-theme-only">
+                    </div>
+                    <div class="client-logo">
+                        <img src="assets/images/university-logo.svg" alt="University of Washington" class="light-theme-only">
+                        <img src="assets/images/university-logo-dark.svg" alt="University of Washington" class="dark-theme-only">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://bilberrry.com/wp-content/uploads/2022/08/gofundme.png" alt="GoFundMe">
+                    </div>
+                    <div class="client-logo">
+                        <img src="assets/images/harvard-logo.svg" alt="Harvard University">
+                    </div>
+                    <div class="client-logo">
+                        <img src="assets/images/business-wire-logo.svg" alt="Business Wire">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section case-studies" id="work">
+            <div class="container case-studies__stack">
+                <article class="case-study">
+                    <div class="case-study__content">
+                        <p class="case-study__eyebrow">Asked us:</p>
+                        <h3 class="case-study__title">What is the right way to transform our tech?</h3>
+                        <p>When you know what you need but aren't sure how to get there, we go all-in to uncover the approach that will move your business forward.</p>
+                        <a href="#" class="case-study__link">Here's how we helped a global media brand modernize its tech stack.</a>
+                    </div>
+                    <div class="case-study__media">
+                        <img src="assets/images/business-wire-logo.svg" alt="Business Wire case study mockup">
+                    </div>
+                </article>
+
+                <article class="case-study case-study--alt">
+                    <div class="case-study__content">
+                        <p class="case-study__eyebrow">Wanted to know:</p>
+                        <h3 class="case-study__title">Can you enhance our web presence?</h3>
+                        <p>When it comes to digital experiences, we can build almost anything. And if there's a better solution, we'll tell you. We always start with why, using the answer to drive meaningful transformation.</p>
+                        <a href="#" class="case-study__link">See what we designed for a global non-profit.</a>
+                    </div>
+                    <div class="case-study__media">
+                        <img src="https://bilberrry.com/wp-content/uploads/2022/08/gofundme.png" alt="GoFundMe case study mockup">
+                    </div>
+                </article>
+
+                <article class="case-study">
+                    <div class="case-study__content">
+                        <p class="case-study__eyebrow">Wondered:</p>
+                        <h3 class="case-study__title">Can one site support many missions?</h3>
+                        <p>By pairing thoughtful strategy with design that connects people to causes, the answer is yes. It's how we helped PPG elevate their mission across audiences.</p>
+                        <a href="#" class="case-study__link">Explore how we crafted a scalable platform for public good.</a>
+                    </div>
+                    <div class="case-study__media">
+                        <img src="assets/images/ppg-logo.svg" alt="PPG case study mockup">
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="eyebrow">THE REVIEWS ARE REAL (AND REALLY GOOD)</h2>
+                    <p class="section-subtitle">From startups to global organizations, our clients consistently rate us 5 stars for creativity, collaboration, and results.</p>
+                    <a href="#" class="cta-link">Read our verified reviews</a>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial">
+                        <blockquote>"They approached the project not simply as developers, but as partners-invested in understanding our business."</blockquote>
+                        <cite><strong>Sands Investment Group</strong><br>Director of Operations</cite>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>"TGlobal was an amazing partner throughout the whole process. They were also a pleasure to work with."</blockquote>
+                        <cite><strong>Snohomish County PUD</strong><br>Communications Director</cite>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>"In 18 years of working with many digital agencies, I never found an organization that was as effective as they are."</blockquote>
+                        <cite><strong>The Life You Can Save</strong><br>Executive Director Emeritus</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section services" id="services">
+            <div class="container services-grid">
+                <div class="service-card">
+                    <div class="service-card__icon" aria-hidden="true"></div>
                     <h3 class="service-card__title">WE THINK WITH YOU</h3>
                     <ul class="service-card__list">
                         <li>AI Enablement Strategy</li>
@@ -233,11 +180,8 @@
                         <li>Information Architecture</li>
                     </ul>
                 </div>
-
                 <div class="service-card">
-                    <div class="service-card__icon">
-                        <img src="assets/images/gofundme-logo.png" alt="Icon" loading="lazy">
-                    </div>
+                    <div class="service-card__icon" aria-hidden="true"></div>
                     <h3 class="service-card__title">WE ENVISION WITH YOU</h3>
                     <ul class="service-card__list">
                         <li>Digital Product Design</li>
@@ -246,11 +190,8 @@
                         <li>Brand Identity Design</li>
                     </ul>
                 </div>
-
                 <div class="service-card">
-                    <div class="service-card__icon">
-                        <img src="assets/images/ppg-logo.svg" alt="Icon" loading="lazy">
-                    </div>
+                    <div class="service-card__icon" aria-hidden="true"></div>
                     <h3 class="service-card__title">WE BUILD WITH YOU</h3>
                     <ul class="service-card__list">
                         <li>Web App Development</li>
@@ -260,26 +201,51 @@
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Section -->
-    <section class="section cta" id="approach">
-        <div class="container">
-            <div class="cta__content">
-                <h2 class="cta__title">We ask why, not what</h2>
-                <p class="cta__text">When we agree to build something, we’re agreeing to build the future of your business. So we always start by asking: Why?</p>
-                <a href="#" class="button button--inverted">Learn More About Our Approach</a>
+        <section class="section cta" id="approach">
+            <div class="container">
+                <div class="cta__content">
+                    <h2 class="cta__title">We ask why, not what</h2>
+                    <p class="cta__text">When we agree to build something, we're agreeing to build the future of your business. So we always start by asking: Why?</p>
+                    <a href="#contact" class="button button--inverted">Learn More About Our Approach</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="site-footer" id="contact">
+        <section id="contact" class="section planner">
+            <div class="container planner__grid">
+                <div class="planner__intro">
+                    <h2>Ready to build what's next?</h2>
+                    <p>Tell us about your goals and we'll assemble the team, technology, and process to make it happen.</p>
+                    <div class="planner__note">This form is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a> apply.</div>
+                </div>
+                <form class="planner__form" action="#" method="post">
+                    <div class="planner__field">
+                        <label for="name">Full Name</label>
+                        <input id="name" name="name" type="text" placeholder="Jane Smith" required>
+                    </div>
+                    <div class="planner__field">
+                        <label for="email">Work Email</label>
+                        <input id="email" name="email" type="email" placeholder="jane@company.com" required>
+                    </div>
+                    <div class="planner__field planner__field--span">
+                        <label for="details">Project Details</label>
+                        <textarea id="details" name="details" rows="4" placeholder="Describe your project goals, timeline, and budget." required></textarea>
+                    </div>
+                    <div class="planner__actions planner__field--span">
+                        <button type="submit" class="button">Start the Conversation</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="footer">
         <div class="container">
             <div class="site-footer__top">
                 <div class="site-footer__brand">
-                    <img src="assets/images/bilberrry-logo.svg" alt="Bilberrry" class="site-footer__logo">
+                    <span class="site-footer__logo brand-mark brand-mark--footer">T<span>Global</span></span>
                     <p>Modern digital innovation agency and trusted website &amp; app development partner.</p>
                 </div>
                 <div class="site-footer__links">
@@ -304,20 +270,20 @@
                     <div class="site-footer__column">
                         <h4>Connect</h4>
                         <ul>
-                            <li><a href="#" aria-label="Bilberrry on LinkedIn">LinkedIn</a></li>
-                            <li><a href="#" aria-label="Bilberrry on Twitter">Twitter</a></li>
-                            <li><a href="#" aria-label="Bilberrry on Dribbble">Dribbble</a></li>
-                            <li><a href="#" aria-label="Bilberrry on GitHub">GitHub</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Dribbble</a></li>
+                            <li><a href="#">GitHub</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="site-footer__bottom">
-                <p>&copy; 2024 Bilberrry. All rights reserved.</p>
+                <p>&copy; 2024 TGlobal. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js" defer></script>
 </body>
 </html>

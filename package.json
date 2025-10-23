@@ -1,7 +1,7 @@
 {
-  "name": "bilberrry-replica",
+  "name": "tglobal-agency-site",
   "version": "1.0.0",
-  "description": "A modern replica of Bilberrry.com - Full-service digital innovation agency website",
+  "description": "A modern TGlobal agency site inspired by the Bilberrry full-service digital innovation experience",
   "main": "index.html",
   "scripts": {
     "dev": "live-server --port=3000 --open=/index.html",
@@ -10,14 +10,14 @@
     "test": "echo 'Tests passed - static HTML/CSS/JS validation complete'"
   },
   "keywords": [
-    "bilberrry",
+    "tglobal",
     "agency",
     "website",
     "replica",
     "responsive",
     "modern"
   ],
-  "author": "TGlobal",
+  "author": "TGlobal Team",
   "license": "MIT",
   "devDependencies": {
     "live-server": "^1.2.2"
