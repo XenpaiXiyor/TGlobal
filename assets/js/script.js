@@ -252,5 +252,3 @@ window.TGlobalUtils = {
         }, 3000);
     }
 };
-
-window.BilberrryUtils = window.TGlobalUtils;

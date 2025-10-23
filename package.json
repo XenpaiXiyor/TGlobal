@@ -1,7 +1,7 @@
 {
   "name": "tglobal-agency-site",
   "version": "1.0.0",
-  "description": "A modern TGlobal agency site inspired by the Bilberrry full-service digital innovation experience",
+  "description": "A modern TGlobal agency site showcasing full-service digital innovation capabilities",
   "main": "index.html",
   "scripts": {
     "dev": "live-server --port=3000 --open=/index.html",

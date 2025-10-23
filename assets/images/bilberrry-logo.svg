@@ -7,5 +7,5 @@
   </defs>
   <circle cx="25" cy="25" r="18" fill="url(#gradient)"/>
   <circle cx="25" cy="25" r="8" fill="white"/>
-  <text x="50" y="32" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#111827">Bilberrry</text>
+  <text x="50" y="32" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#111827">TGlobal</text>
 </svg>

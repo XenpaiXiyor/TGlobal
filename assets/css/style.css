@@ -263,7 +263,6 @@ body.theme-light .button--ghost {
     font-weight: 600;
     letter-spacing: -0.02em;
     color: var(--color-header-text);
-    text-transform: uppercase;
     gap: 4px;
 }
 
