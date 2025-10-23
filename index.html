@@ -82,24 +82,34 @@
 
         <section class="section section--muted clients">
             <div class="container">
-                <div class="clients-grid">
-                    <div class="client-logo">
-                        <img src="assets/images/delta-logo.svg" alt="Delta" class="light-theme-only">
-                        <img src="assets/images/delta-logo-dark.svg" alt="Delta" class="dark-theme-only">
+                <div class="clients-carousel" data-clients-carousel>
+                    <button class="clients-carousel__control clients-carousel__control--prev" type="button" aria-label="Previous brand" data-direction="prev">
+                        <span aria-hidden="true">&#10094;</span>
+                    </button>
+                    <div class="clients-carousel__viewport">
+                        <div class="clients-carousel__track">
+                            <div class="client-logo">
+                                <img src="assets/images/delta-logo.svg" alt="Delta" class="light-theme-only">
+                                <img src="assets/images/delta-logo-dark.svg" alt="Delta" class="dark-theme-only">
+                            </div>
+                            <div class="client-logo">
+                                <img src="assets/images/university-logo.svg" alt="University of Washington" class="light-theme-only">
+                                <img src="assets/images/university-logo-dark.svg" alt="University of Washington" class="dark-theme-only">
+                            </div>
+                            <div class="client-logo">
+                                <img src="https://bilberrry.com/wp-content/uploads/2022/08/gofundme.png" alt="GoFundMe">
+                            </div>
+                            <div class="client-logo">
+                                <img src="assets/images/harvard-logo.svg" alt="Harvard University">
+                            </div>
+                            <div class="client-logo">
+                                <img src="assets/images/business-wire-logo.svg" alt="Business Wire">
+                            </div>
+                        </div>
                     </div>
-                    <div class="client-logo">
-                        <img src="assets/images/university-logo.svg" alt="University of Washington" class="light-theme-only">
-                        <img src="assets/images/university-logo-dark.svg" alt="University of Washington" class="dark-theme-only">
-                    </div>
-                    <div class="client-logo">
-                        <img src="https://bilberrry.com/wp-content/uploads/2022/08/gofundme.png" alt="GoFundMe">
-                    </div>
-                    <div class="client-logo">
-                        <img src="assets/images/harvard-logo.svg" alt="Harvard University">
-                    </div>
-                    <div class="client-logo">
-                        <img src="assets/images/business-wire-logo.svg" alt="Business Wire">
-                    </div>
+                    <button class="clients-carousel__control clients-carousel__control--next" type="button" aria-label="Next brand" data-direction="next">
+                        <span aria-hidden="true">&#10095;</span>
+                    </button>
                 </div>
             </div>
         </section>

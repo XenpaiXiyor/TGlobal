@@ -195,6 +195,110 @@
             applyTheme(event.matches ? 'dark' : 'light');
         });
 
+        const clientsCarousel = document.querySelector('[data-clients-carousel]');
+        if (clientsCarousel) {
+            const track = clientsCarousel.querySelector('.clients-carousel__track');
+            const items = Array.from(track.children);
+            const prevControl = clientsCarousel.querySelector('[data-direction="prev"]');
+            const nextControl = clientsCarousel.querySelector('[data-direction="next"]');
+            let currentIndex = 0;
+            let autoTimer = null;
+            let resizeTimer = null;
+
+            const getGap = () => {
+                const styles = window.getComputedStyle(track);
+                const columnGap = parseFloat(styles.columnGap || styles.gap || '0');
+                return Number.isNaN(columnGap) ? 0 : columnGap;
+            };
+
+            const getVisibleCount = () => {
+                const width = window.innerWidth;
+                if (width <= 540) return 1;
+                if (width <= 768) return 2;
+                return 3;
+            };
+
+            const getMaxIndex = () => Math.max(0, items.length - getVisibleCount());
+
+            const updatePosition = () => {
+                if (!items.length) return;
+                const gap = getGap();
+                const itemWidth = items[0].getBoundingClientRect().width;
+                const offset = currentIndex * (itemWidth + gap);
+                track.style.transform = `translateX(${-offset}px)`;
+            };
+
+            const move = direction => {
+                const maxIndex = getMaxIndex();
+                if (maxIndex <= 0) {
+                    return;
+                }
+
+                currentIndex += direction;
+                if (currentIndex > maxIndex) {
+                    currentIndex = 0;
+                } else if (currentIndex < 0) {
+                    currentIndex = maxIndex;
+                }
+
+                updatePosition();
+            };
+
+            const stopAuto = () => {
+                if (autoTimer) {
+                    window.clearInterval(autoTimer);
+                    autoTimer = null;
+                }
+            };
+
+            const startAuto = () => {
+                stopAuto();
+                if (getVisibleCount() >= 3) {
+                    autoTimer = window.setInterval(() => move(1), 4000);
+                }
+            };
+
+            nextControl?.addEventListener('click', () => {
+                move(1);
+                if (getVisibleCount() >= 3) {
+                    startAuto();
+                } else {
+                    stopAuto();
+                }
+            });
+
+            prevControl?.addEventListener('click', () => {
+                move(-1);
+                if (getVisibleCount() >= 3) {
+                    startAuto();
+                } else {
+                    stopAuto();
+                }
+            });
+
+            clientsCarousel.addEventListener('mouseenter', stopAuto);
+            clientsCarousel.addEventListener('mouseleave', () => {
+                if (getVisibleCount() >= 3) {
+                    startAuto();
+                }
+            });
+
+            window.addEventListener('resize', () => {
+                window.clearTimeout(resizeTimer);
+                resizeTimer = window.setTimeout(() => {
+                    const maxIndex = getMaxIndex();
+                    if (currentIndex > maxIndex) {
+                        currentIndex = maxIndex;
+                    }
+                    updatePosition();
+                    startAuto();
+                }, 150);
+            });
+
+            updatePosition();
+            startAuto();
+        }
+
         ['assets/images/bilberrry-logo.svg', 'assets/images/bb-sky.webp'].forEach(src => {
             const img = new Image();
             img.src = src;
