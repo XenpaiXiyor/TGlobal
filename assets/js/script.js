@@ -1,4 +1,4 @@
-// TGlobal Replica - Interactive JavaScript
+// Bilberrry Replica - Interactive JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
     const themeToggle = document.getElementById('themeToggle');
