@@ -731,6 +731,10 @@ body[data-theme="light"] .logo-dark {
         border: 1px solid var(--border-color);
         width: min(280px, calc(100vw - 32px));
         right: 16px;
+        z-index: 1001;
+        margin-top: 1rem;
+        align-items: flex-start;
+        text-align: left;
     }
 
     .nav-menu.active {
@@ -739,6 +743,12 @@ body[data-theme="light"] .logo-dark {
 
     .nav-link {
         padding: 0.5rem 0;
+        display: block;
+        width: 100%;
+    }
+
+    .nav-menu li {
+        width: 100%;
     }
 
     .hero-title br {
