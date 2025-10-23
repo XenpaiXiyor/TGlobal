@@ -2,21 +2,25 @@
 document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
     const themeToggle = document.getElementById('themeToggle');
-    const header = document.querySelector('.header');
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+    const header = document.getElementById('header');
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
 
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
 
     const applyTheme = (theme, persist = false) => {
-        body.setAttribute('data-theme', theme);
+        const themeClass = theme === 'dark' ? 'theme-dark' : 'theme-light';
+        body.classList.remove('theme-dark', 'theme-light');
+        body.classList.add(themeClass);
+
         if (persist) {
             localStorage.setItem('theme', theme);
         }
+
         if (themeToggle) {
-            themeToggle.setAttribute('aria-pressed', (theme === 'dark').toString());
+            themeToggle.setAttribute('aria-checked', (theme === 'dark').toString());
         }
     };
 
@@ -24,58 +28,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (themeToggle) {
         themeToggle.setAttribute('role', 'switch');
-        themeToggle.setAttribute('aria-label', 'Toggle color theme');
         themeToggle.addEventListener('click', () => {
-            const currentTheme = body.getAttribute('data-theme') || 'light';
+            const currentTheme = body.classList.contains('theme-dark') ? 'dark' : 'light';
             const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
             applyTheme(nextTheme, true);
         });
     }
 
     const toggleMobileNav = (force) => {
-        if (!navToggle || !navMenu) return;
-        const shouldOpen = typeof force === 'boolean' ? force : !navMenu.classList.contains('active');
-        navMenu.classList.toggle('active', shouldOpen);
-        navToggle.classList.toggle('active', shouldOpen);
+        if (!navToggle || !mobileNav) return;
+        const shouldOpen = typeof force === 'boolean' ? force : !mobileNav.classList.contains('open');
+        mobileNav.classList.toggle('open', shouldOpen);
+        navToggle.classList.toggle('is-active', shouldOpen);
         body.classList.toggle('nav-open', shouldOpen);
         navToggle.setAttribute('aria-expanded', shouldOpen.toString());
-
-        const spans = navToggle.querySelectorAll('span');
-        spans.forEach((span, index) => {
-            if (shouldOpen) {
-                if (index === 0) span.style.transform = 'rotate(45deg) translate(5px, 5px)';
-                if (index === 1) span.style.opacity = '0';
-                if (index === 2) span.style.transform = 'rotate(-45deg) translate(7px, -6px)';
-            } else {
-                span.style.transform = '';
-                span.style.opacity = '';
-            }
-        });
     };
 
-    if (navToggle && navMenu) {
-        navToggle.setAttribute('aria-label', 'Toggle navigation menu');
-        navToggle.setAttribute('aria-expanded', 'false');
+    if (navToggle && mobileNav) {
         navToggle.addEventListener('click', () => toggleMobileNav());
     }
 
-    // Close mobile menu when clicking nav links
-    if (navMenu && navToggle) {
-        document.querySelectorAll('.nav-link').forEach(link => {
+    if (mobileNav && navToggle) {
+        mobileNav.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => toggleMobileNav(false));
         });
     }
 
-    // Header background opacity on scroll
     let lastScrollY = window.scrollY;
 
     function updateHeaderOnScroll() {
         const currentScrollY = window.scrollY;
 
         if (header) {
-            header.classList.toggle('header--scrolled', currentScrollY > 100);
-            const shouldHide = currentScrollY > lastScrollY && currentScrollY > 200;
-            header.classList.toggle('header--hidden', shouldHide);
+            header.classList.toggle('site-header--scrolled', currentScrollY > 80);
+            const shouldHide = currentScrollY > lastScrollY && currentScrollY > 160;
+            header.classList.toggle('site-header--hidden', shouldHide);
         }
 
         lastScrollY = currentScrollY;
@@ -89,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (target) {
                 const headerHeight = header ? header.offsetHeight : 0;
-                const targetPosition = target.offsetTop - headerHeight - 20;
+                const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight - 12;
 
                 window.scrollTo({
                     top: targetPosition,
@@ -115,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Observe elements for animation
     const animateElements = document.querySelectorAll(
-        '.case-study, .testimonial, .service-category, .client-logo'
+        '.case-study, .testimonial, .service-card, .client-logo'
     );
 
     animateElements.forEach(el => {
@@ -143,37 +130,6 @@ document.addEventListener('DOMContentLoaded', function() {
         setInterval(rotateTestimonials, 5000);
         rotateTestimonials(); // Initial call
     }
-
-    // Client logo hover effects with stagger
-    const clientLogos = document.querySelectorAll('.client-logo');
-    clientLogos.forEach((logo, index) => {
-        logo.addEventListener('mouseenter', function() {
-            // Add slight delay based on index for stagger effect
-            setTimeout(() => {
-                this.style.transform = 'translateY(-10px) scale(1.05)';
-                this.style.filter = 'grayscale(0)';
-            }, index * 50);
-        });
-
-        logo.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-            this.style.filter = 'grayscale(1)';
-        });
-    });
-
-    // Case study hover interactions
-    const caseStudies = document.querySelectorAll('.case-study');
-    caseStudies.forEach(study => {
-        study.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px)';
-            this.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.15)';
-        });
-
-        study.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-            this.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
-        });
-    });
 
     // Form validation (if contact forms are added)
     function validateForm(form) {
@@ -233,7 +189,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Keyboard navigation support
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && navMenu && navMenu.classList.contains('active')) {
+        if (e.key === 'Escape' && mobileNav && mobileNav.classList.contains('open')) {
             toggleMobileNav(false);
         }
 
@@ -245,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Preload critical images
     const criticalImages = [
-        'assets/images/tglobal-logo.svg',
+        'assets/images/bilberrry-logo.svg',
         'assets/images/bb-sky.webp'
     ];
 
@@ -255,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Initialize page
-    console.log('🚀 TGlobal interactive features loaded successfully!');
+    console.log('🚀 Bilberrry replica interactive features loaded successfully!');
 
     // Add loading state management
     window.addEventListener('load', function() {
