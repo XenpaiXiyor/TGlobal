@@ -187,13 +187,19 @@
             }
         });
 
-        prefersDarkMedia.addEventListener('change', event => {
+        const handlePrefChange = event => {
             if (localStorage.getItem(STORAGE_KEY)) {
                 return;
             }
 
             applyTheme(event.matches ? 'dark' : 'light');
-        });
+        };
+
+        if (typeof prefersDarkMedia.addEventListener === 'function') {
+            prefersDarkMedia.addEventListener('change', handlePrefChange);
+        } else if (typeof prefersDarkMedia.addListener === 'function') {
+            prefersDarkMedia.addListener(handlePrefChange);
+        }
 
         const clientsCarousel = document.querySelector('[data-clients-carousel]');
         if (clientsCarousel) {
@@ -225,7 +231,11 @@
                 const gap = getGap();
                 const itemWidth = items[0].getBoundingClientRect().width;
                 const offset = currentIndex * (itemWidth + gap);
-                track.style.transform = `translateX(${-offset}px)`;
+                try {
+                    track.style.transform = `translateX(${-offset}px)`;
+                } catch (error) {
+                    console.warn('Carousel transform update failed:', error);
+                }
             };
 
             const move = direction => {
