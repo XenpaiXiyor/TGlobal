@@ -12,7 +12,7 @@
 	<!-- Optimized with WP Meteor v3.4.16 - https://wordpress.org/plugins/wp-meteor/ --><script data-wpmeteor-nooptimize="true" data-cfasync="false">var _wpmeteor={"rdelay":5000,"preload":true,"v":"3.4.16","rest_url":"https:\/\/bilberrry.com\/wp-json\/"};(()=>{try{new MutationObserver(function(){}),new Promise(function(){}),Object.assign({},{}),document.fonts.ready.then(function(){})}catch{s="wpmeteordisable=1",i=document.location.href,i.match(/[?&]wpmeteordisable/)||(o="",i.indexOf("?")==-1?i.indexOf("#")==-1?o=i+"?"+s:o=i.replace("#","?"+s+"#"):i.indexOf("#")==-1?o=i+"&"+s:o=i.replace("#","&"+s+"#"),document.location.href=o)}var s,i,o;})();
 
 </script><script data-wpmeteor-nooptimize="true" data-cfasync="false">(()=>{var v="addEventListener",ue="removeEventListener",p="getAttribute",L="setAttribute",pe="removeAttribute",N="hasAttribute",St="querySelector",F=St+"All",U="appendChild",Q="removeChild",fe="createElement",T="tagName",Ae="getOwnPropertyDescriptor",y="prototype",W="__lookupGetter__",Ee="__lookupSetter__",m="DOMContentLoaded",f="load",B="pageshow",me="error";var d=window,c=document,Te=c.documentElement;var $=console.error;var Ke=!0,X=class{constructor(){this.known=[]}init(){let t,n,s=(r,a)=>{if(Ke&&r&&r.fn&&!r.__wpmeteor){let o=function(i){return i===r?this:(c[v](m,l=>{i.call(c,r,l,"jQueryMock")}),this)};this.known.push([r,r.fn.ready,r.fn.init?.prototype?.ready]),r.fn.ready=o,r.fn.init?.prototype?.ready&&(r.fn.init.prototype.ready=o),r.__wpmeteor=!0}return r};window.jQuery||window.$,Object.defineProperty(window,"jQuery",{get(){return t},set(r){t=s(r,"jQuery")},configurable:!0}),Object.defineProperty(window,"$",{get(){return n},set(r){n=s(r,"$")},configurable:!0})}unmock(){this.known.forEach(([t,n,s])=>{t.fn.ready=n,t.fn.init?.prototype?.ready&&s&&(t.fn.init.prototype.ready=s)}),Ke=!1}};var ge="fpo:first-interaction",he="fpo:replay-captured-events";var Je="fpo:element-loaded",Se="fpo:images-loaded",M="fpo:the-end";var Z="click",V=window,Qe=V.addEventListener.bind(V),Xe=V.removeEventListener.bind(V),Ge="removeAttribute",ve="getAttribute",Gt="setAttribute",Ne=["touchstart","touchmove","touchend","touchcancel","keydown","wheel"],Ze=["mouseover","mouseout",Z],Nt=["touchstart","touchend","touchcancel","mouseover","mouseout",Z],R="data-wpmeteor-";var Ue="dispatchEvent",je=e=>{let t=new MouseEvent(Z,{view:e.view,bubbles:!0,cancelable:!0});return Object.defineProperty(t,"target",{writable:!1,value:e.target}),t},Be=class{static capture(){let t=!1,[,n,s]=`${window.Promise}`.split(/[\s[(){]+/s);if(V["__"+s+n])return;let r=[],a=o=>{if(o.target&&Ue in o.target){if(!o.isTrusted)return;if(o.cancelable&&!Ne.includes(o.type))try{o.preventDefault()}catch{}o.stopImmediatePropagation(),o.type===Z?r.push(je(o)):Nt.includes(o.type)&&r.push(o),o.target[Gt](R+o.type,!0),t||(t=!0,V[Ue](new CustomEvent(ge)))}};V.addEventListener(he,()=>{Ze.forEach(l=>Xe(l,a,{passive:!1,capture:!0})),Ne.forEach(l=>Xe(l,a,{passive:!0,capture:!0}));let o;for(;o=r.shift();){var i=o.target;i[ve](R+"touchstart")&&i[ve](R+"touchend")&&!i[ve](R+Z)?(i[ve](R+"touchmove")||r.push(je(o)),i[Ge](R+"touchstart"),i[Ge](R+"touchend")):i[Ge](R+o.type),i[Ue](o)}}),Ze.forEach(o=>Qe(o,a,{passive:!1,capture:!0})),Ne.forEach(o=>Qe(o,a,{passive:!0,capture:!0}))}};var et=Be;var j=class{constructor(){this.l=[]}emit(t,n=null){this.l[t]&&this.l[t].forEach(s=>s(n))}on(t,n){this.l[t]||=[],this.l[t].push(n)}off(t,n){this.l[t]=(this.l[t]||[]).filter(s=>s!==n)}};var D=new j;var ye=c[fe]("span");ye[L]("id","elementor-device-mode");ye[L]("class","elementor-screen-only");var Ut=!1,tt=()=>(Ut||c.body[U](ye),getComputedStyle(ye,":after").content.replace(/"/g,""));var rt=e=>e[p]("class")||"",nt=(e,t)=>e[L]("class",t),st=()=>{d[v](f,function(){let e=tt(),t=Math.max(Te.clientWidth||0,d.innerWidth||0),n=Math.max(Te.clientHeight||0,d.innerHeight||0),s=["_animation_"+e,"animation_"+e,"_animation","_animation","animation"];Array.from(c[F](".elementor-invisible")).forEach(r=>{let a=r.getBoundingClientRect();if(a.top+d.scrollY<=n&&a.left+d.scrollX<t)try{let i=JSON.parse(r[p]("data-settings"));if(i.trigger_source)return;let l=i._animation_delay||i.animation_delay||0,u,E;for(var o=0;o<s.length;o++)if(i[s[o]]){E=s[o],u=i[E];break}if(u){let q=rt(r),J=u==="none"?q:q+" animated "+u,At=setTimeout(()=>{nt(r,J.replace(/\belementor-invisible\b/,"")),s.forEach(Tt=>delete i[Tt]),r[L]("data-settings",JSON.stringify(i))},l);D.on("fi",()=>{clearTimeout(At),nt(r,rt(r).replace(new RegExp("\b"+u+"\b"),""))})}}catch(i){console.error(i)}})})};var ot="data-in-mega_smartmenus",it=()=>{let e=c[fe]("div");e.innerHTML='<span class="sub-arrow --wp-meteor"><i class="fa" aria-hidden="true"></i></span>';let t=e.firstChild,n=s=>{let r=[];for(;s=s.previousElementSibling;)r.push(s);return r};c[v](m,function(){Array.from(c[F](".pp-advanced-menu ul")).forEach(s=>{if(s[p](ot))return;(s[p]("class")||"").match(/\bmega-menu\b/)&&s[F]("ul").forEach(o=>{o[L](ot,!0)});let r=n(s),a=r.filter(o=>o).filter(o=>o[T]==="A").pop();if(a||(a=r.map(o=>Array.from(o[F]("a"))).filter(o=>o).flat().pop()),a){let o=t.cloneNode(!0);a[U](o),new MutationObserver(l=>{l.forEach(({addedNodes:u})=>{u.forEach(E=>{if(E.nodeType===1&&E[T]==="SPAN")try{a[Q](o)}catch{}})})}).observe(a,{childList:!0})}})})};var w="readystatechange",A="message";var Y="SCRIPT",g="data-wpmeteor-",b=Object.defineProperty,Ve=Object.defineProperties,P="javascript/blocked",Pe=/^\s*(application|text)\/javascript|module\s*$/i,mt="requestAnimationFrame",gt="requestIdleCallback",ie="setTimeout",Ie="__dynamic",I=d.constructor.name+"::",ce=c.constructor.name+"::",ht=function(e,t){t=t||d;for(var n=0;n<this.length;n++)e.call(t,this[n],n,this)};"NodeList"in d&&!NodeList[y].forEach&&(NodeList[y].forEach=ht);"HTMLCollection"in d&&!HTMLCollection[y].forEach&&(HTMLCollection[y].forEach=ht);_wpmeteor["elementor-animations"]&&st(),_wpmeteor["elementor-pp"]&&it();var _e=[],Le=[],ee=[],se=!1,k=[],h={},He=!1,Bt=0,H=c.visibilityState==="visible"?d[mt]:d[ie],vt=d[gt]||H;c[v]("visibilitychange",()=>{H=c.visibilityState==="visible"?d[mt]:d[ie],vt=d[gt]||H});var C=d[ie],De,z=["src","type"],x=Object,te="definePropert";x[te+"y"]=(e,t,n)=>{if(e===d&&["jQuery","onload"].indexOf(t)>=0||(e===c||e===c.body)&&["readyState","write","writeln","on"+w].indexOf(t)>=0)return["on"+w,"on"+f].indexOf(t)&&n.set&&(h["on"+w]=h["on"+w]||[],h["on"+w].push(n.set)),e;if(e instanceof HTMLScriptElement&&z.indexOf(t)>=0){if(!e[t+"__def"]){let s=x[Ae](e,t);b(e,t,{set(r){return e[t+"__set"]?e[t+"__set"].call(e,r):s.set.call(e,r)},get(){return e[t+"__get"]?e[t+"__get"].call(e):s.get.call(e)}}),e[t+"__def"]=!0}return n.get&&(e[t+"__get"]=n.get),n.set&&(e[t+"__set"]=n.set),e}return b(e,t,n)};x[te+"ies"]=(e,t)=>{for(let n in t)x[te+"y"](e,n,t[n]);for(let n of x.getOwnPropertySymbols(t))x[te+"y"](e,n,t[n]);return e};var qe=EventTarget[y][v],yt=EventTarget[y][ue],ae=qe.bind(c),Ct=yt.bind(c),G=qe.bind(d),_t=yt.bind(d),Lt=Document[y].createElement,le=Lt.bind(c),de=c.__proto__[W]("readyState").bind(c),ct="loading";b(c,"readyState",{get(){return ct},set(e){return ct=e}});var at=e=>k.filter(([t,,n],s)=>{if(!(e.indexOf(t.type)<0)){n||(n=t.target);try{let r=n.constructor.name+"::"+t.type;for(let a=0;a<h[r].length;a++)if(h[r][a]){let o=r+"::"+s+"::"+a;if(!xe[o])return!0}}catch{}}}).length,oe,xe={},K=e=>{k.forEach(([t,n,s],r)=>{if(!(e.indexOf(t.type)<0)){s||(s=t.target);try{let a=s.constructor.name+"::"+t.type;if((h[a]||[]).length)for(let o=0;o<h[a].length;o++){let i=h[a][o];if(i){let l=a+"::"+r+"::"+o;if(!xe[l]){xe[l]=!0,c.readyState=n,oe=a;try{Bt++,!i[y]||i[y].constructor===i?i.bind(s)(t):i(t)}catch(u){$(u,i)}oe=null}}}}catch(a){$(a)}}})};ae(m,e=>{k.push([new e.constructor(m,e),de(),c])});ae(w,e=>{k.push([new e.constructor(w,e),de(),c])});G(m,e=>{k.push([new e.constructor(m,e),de(),d])});G(f,e=>{He=!0,k.push([new e.constructor(f,e),de(),d]),O||K([m,w,A,f,B])});G(B,e=>{k.push([new e.constructor(B,e),de(),d]),O||K([m,w,A,f,B])});var wt=e=>{k.push([e,c.readyState,d])},Ot=d[W]("onmessage"),Rt=d[Ee]("onmessage"),Pt=()=>{_t(A,wt),(h[I+"message"]||[]).forEach(e=>{G(A,e)}),b(d,"onmessage",{get:Ot,set:Rt})};G(A,wt);var Dt=new X;Dt.init();var Fe=()=>{!O&&!se&&(O=!0,c.readyState="loading",H($e),H(S)),He||G(f,()=>{Fe()})};G(ge,()=>{Fe()});D.on(Se,()=>{Fe()});_wpmeteor.rdelay>=0&&et.capture();var re=[-1],Ce=e=>{re=re.filter(t=>t!==e.target),re.length||C(D.emit.bind(D,M))};var O=!1,S=()=>{let e=_e.shift();if(e)e[p](g+"src")?e[N]("async")||e[Ie]?(e.isConnected&&(re.push(e),setTimeout(Ce,1e3,{target:e})),Oe(e,Ce),C(S)):Oe(e,C.bind(null,S)):(e.origtype==P&&Oe(e),C(S));else if(Le.length)_e.push(...Le),Le.length=0,C(S);else if(at([m,w,A]))K([m,w,A]),C(S);else if(He)if(at([f,B,A]))K([f,B,A]),C(S);else if(re.length>1)vt(S);else if(ee.length)_e.push(...ee),ee.length=0,C(S);else{if(d.RocketLazyLoadScripts)try{RocketLazyLoadScripts.run()}catch(t){$(t)}c.readyState="complete",Pt(),Dt.unmock(),O=!1,se=!0,d[ie](()=>Ce({target:-1}))}else O=!1},xt=e=>{let t=le(Y),n=e.attributes;for(var s=n.length-1;s>=0;s--)n[s].name.startsWith(g)||t[L](n[s].name,n[s].value);let r=e[p](g+"type");r?t.type=r:t.type="text/javascript",(e.textContent||"").match(/^\s*class RocketLazyLoadScripts/)?t.textContent=e.textContent.replace(/^\s*class\s*RocketLazyLoadScripts/,"window.RocketLazyLoadScripts=class").replace("RocketLazyLoadScripts.run();",""):t.textContent=e.textContent;for(let a of["onload","onerror","onreadystatechange"])e[a]&&(t[a]=e[a]);return t},Oe=(e,t)=>{let n=e[p](g+"src");if(n){let s=qe.bind(e);e.isConnected&&t&&(s(f,t),s(me,t)),e.origtype=e[p](g+"type")||"text/javascript",e.origsrc=n,(!e.isConnected||e[N]("nomodule")||e.type&&!Pe.test(e.type))&&t&&t(new Event(f,{target:e}))}else e.origtype===P?(e.origtype=e[p](g+"type")||"text/javascript",e[pe]("integrity"),e.textContent=e.textContent+`
-`):t&&t(new Event(f,{target:e}))},We=(e,t)=>{let n=(h[e]||[]).indexOf(t);if(n>=0)return h[e][n]=void 0,!0},lt=(e,t,...n)=>{if("HTMLDocument::"+m==oe&&e===m&&!t.toString().match(/jQueryMock/)){D.on(M,c[v].bind(c,e,t,...n));return}if(t&&(e===m||e===w)){let s=ce+e;h[s]=h[s]||[],h[s].push(t),se&&K([e]);return}return ae(e,t,...n)},dt=(e,t,...n)=>{if(e===m){let s=ce+e;We(s,t)}return Ct(e,t,...n)};Ve(c,{[v]:{get(){return lt},set(){return lt}},[ue]:{get(){return dt},set(){return dt}}});var ne=c.createDocumentFragment(),$e=()=>{ne.hasChildNodes()&&(c.head[U](ne),ne=c.createDocumentFragment())},ut={},we=e=>{if(e)try{let t=new URL(https://bilberrry.com/notes/headless-commerce-benefits/e,c.location.href),n=t.origin;if(n&&!ut[n]&&c.location.host!==t.host){let s=le("link");s.rel="preconnect",s.href=n,ne[U](s),ut[n]=!0,O&&H($e)}}catch{}},be={},kt=(e,t,n,s)=>{let r=le("link");r.rel=t?"modulepre"+f:"pre"+f,r.as="script",n&&r[L]("crossorigin",n),s&&r[L]("integrity",s);try{e=new URL(https://bilberrry.com/notes/headless-commerce-benefits/e,c.location.href).href}catch{}r.href=e,ne[U](r),be[e]=!0,O&&H($e)},ke=function(...e){let t=le(...e);if(!e||e[0].toUpperCase()!==Y||!O)return t;let n=t[L].bind(t),s=t[p].bind(t),r=t[pe].bind(t),a=t[N].bind(t),o=t[W]("attributes").bind(t);return z.forEach(i=>{let l=t[W](i).bind(t),u=t[Ee](i).bind(t);x[te+"y"](t,i,{set(E){return i==="type"&&E&&!Pe.test(E)?n(i,E):((i==="src"&&E||i==="type"&&E&&t.origsrc)&&n("type",P),E?n(g+i,E):r(g+i))},get(){let E=t[p](g+i);if(i==="src")try{return new URL(https://bilberrry.com/notes/headless-commerce-benefits/E,c.location.href).href}catch{}return E}}),b(t,"orig"+i,{set(E){return u(E)},get(){return l()}})}),t[L]=function(i,l){if(z.includes(i))return i==="type"&&l&&!Pe.test(l)?n(i,l):((i==="src"&&l||i==="type"&&l&&t.origsrc)&&n("type",P),l?n(g+i,l):r(g+i));n(i,l)},t[p]=function(i){let l=z.indexOf(i)>=0?s(g+i):s(i);if(i==="src")try{return new URL(https://bilberrry.com/notes/headless-commerce-benefits/l,c.location.href).href}catch{}return l},t[N]=function(i){return z.indexOf(i)>=0?a(g+i):a(i)},b(t,"attributes",{get(){return[...o()].filter(l=>l.name!=="type").map(l=>({name:l.name.match(new RegExp(g))?l.name.replace(g,""):l.name,value:l.value}))}}),t[Ie]=!0,t};Object.defineProperty(Document[y],"createElement",{set(e){e!==ke&&(De=e)},get(){return De||ke}});var Re=new Set,ze=new MutationObserver(e=>{e.forEach(({removedNodes:t,addedNodes:n,target:s})=>{t.forEach(r=>{r.nodeType===1&&Y===r[T]&&"origtype"in r&&Re.delete(r)}),n.forEach(r=>{if(r.nodeType===1)if(Y===r[T]){if("origtype"in r){if(r.origtype!==P)return}else if(r[p]("type")!==P)return;"origtype"in r||z.forEach(o=>{let i=r[W](o).bind(r),l=r[Ee](o).bind(r);b(r,"orig"+o,{set(u){return l(u)},get(){return i()}})});let a=r[p](g+"src");if(Re.has(r)&&$("Inserted twice",r),r.parentNode){Re.add(r);let o=r[p](g+"type");(a||"").match(/\/gtm.js\?/)||r[N]("async")||r[Ie]?(ee.push(r),we(a)):r[N]("defer")||o==="module"?(Le.push(r),we(a)):(a&&!r[N]("nomodule")&&!be[a]&&kt(a,o==="module",r[N]("crossorigin")&&r[p]("crossorigin"),r[p]("integrity")),_e.push(r))}else r[v](f,o=>o.target.parentNode[Q](o.target)),r[v](me,o=>o.target.parentNode[Q](o.target)),s[U](r)}else r[T]==="LINK"&&r[p]("as")==="script"&&(be[r[p]("href")]=!0)})})}),bt={childList:!0,subtree:!0};ze.observe(c.documentElement,bt);var Mt=HTMLElement[y].attachShadow;HTMLElement[y].attachShadow=function(e){let t=Mt.call(this,e);return e.mode==="open"&&ze.observe(t,bt),t};(()=>{let e=x[Ae](HTMLIFrameElement[y],"src");b(HTMLIFrameElement[y],"src",{get(){return this.dataset.fpoSrc?this.dataset.fpoSrc:e.get.call(this)},set(t){delete this.dataset.fpoSrc,e.set.call(this,t)}})})();D.on(M,()=>{(!De||De===ke)&&(Document[y].createElement=Lt,ze.disconnect()),dispatchEvent(new CustomEvent(he)),dispatchEvent(new CustomEvent(M))});var Me=e=>{let t,n;!c.currentScript||!c.currentScript.parentNode?(t=c.body,n=t.lastChild):(n=c.currentScript,t=n.parentNode);try{let s=le("div");s.innerHTML=e,Array.from(s.childNodes).forEach(r=>{r.nodeName===Y?t.insertBefore(xt(r),n):t.insertBefore(r,n)})}catch(s){$(s)}},pt=e=>Me(e+`
+`):t&&t(new Event(f,{target:e}))},We=(e,t)=>{let n=(h[e]||[]).indexOf(t);if(n>=0)return h[e][n]=void 0,!0},lt=(e,t,...n)=>{if("HTMLDocument::"+m==oe&&e===m&&!t.toString().match(/jQueryMock/)){D.on(M,c[v].bind(c,e,t,...n));return}if(t&&(e===m||e===w)){let s=ce+e;h[s]=h[s]||[],h[s].push(t),se&&K([e]);return}return ae(e,t,...n)},dt=(e,t,...n)=>{if(e===m){let s=ce+e;We(s,t)}return Ct(e,t,...n)};Ve(c,{[v]:{get(){return lt},set(){return lt}},[ue]:{get(){return dt},set(){return dt}}});var ne=c.createDocumentFragment(),$e=()=>{ne.hasChildNodes()&&(c.head[U](ne),ne=c.createDocumentFragment())},ut={},we=e=>{if(e)try{let t=new URL(#/notes/headless-commerce-benefits/e,c.location.href),n=t.origin;if(n&&!ut[n]&&c.location.host!==t.host){let s=le("link");s.rel="preconnect",s.href=n,ne[U](s),ut[n]=!0,O&&H($e)}}catch{}},be={},kt=(e,t,n,s)=>{let r=le("link");r.rel=t?"modulepre"+f:"pre"+f,r.as="script",n&&r[L]("crossorigin",n),s&&r[L]("integrity",s);try{e=new URL(#/notes/headless-commerce-benefits/e,c.location.href).href}catch{}r.href=e,ne[U](r),be[e]=!0,O&&H($e)},ke=function(...e){let t=le(...e);if(!e||e[0].toUpperCase()!==Y||!O)return t;let n=t[L].bind(t),s=t[p].bind(t),r=t[pe].bind(t),a=t[N].bind(t),o=t[W]("attributes").bind(t);return z.forEach(i=>{let l=t[W](i).bind(t),u=t[Ee](i).bind(t);x[te+"y"](t,i,{set(E){return i==="type"&&E&&!Pe.test(E)?n(i,E):((i==="src"&&E||i==="type"&&E&&t.origsrc)&&n("type",P),E?n(g+i,E):r(g+i))},get(){let E=t[p](g+i);if(i==="src")try{return new URL(#/notes/headless-commerce-benefits/E,c.location.href).href}catch{}return E}}),b(t,"orig"+i,{set(E){return u(E)},get(){return l()}})}),t[L]=function(i,l){if(z.includes(i))return i==="type"&&l&&!Pe.test(l)?n(i,l):((i==="src"&&l||i==="type"&&l&&t.origsrc)&&n("type",P),l?n(g+i,l):r(g+i));n(i,l)},t[p]=function(i){let l=z.indexOf(i)>=0?s(g+i):s(i);if(i==="src")try{return new URL(#/notes/headless-commerce-benefits/l,c.location.href).href}catch{}return l},t[N]=function(i){return z.indexOf(i)>=0?a(g+i):a(i)},b(t,"attributes",{get(){return[...o()].filter(l=>l.name!=="type").map(l=>({name:l.name.match(new RegExp(g))?l.name.replace(g,""):l.name,value:l.value}))}}),t[Ie]=!0,t};Object.defineProperty(Document[y],"createElement",{set(e){e!==ke&&(De=e)},get(){return De||ke}});var Re=new Set,ze=new MutationObserver(e=>{e.forEach(({removedNodes:t,addedNodes:n,target:s})=>{t.forEach(r=>{r.nodeType===1&&Y===r[T]&&"origtype"in r&&Re.delete(r)}),n.forEach(r=>{if(r.nodeType===1)if(Y===r[T]){if("origtype"in r){if(r.origtype!==P)return}else if(r[p]("type")!==P)return;"origtype"in r||z.forEach(o=>{let i=r[W](o).bind(r),l=r[Ee](o).bind(r);b(r,"orig"+o,{set(u){return l(u)},get(){return i()}})});let a=r[p](g+"src");if(Re.has(r)&&$("Inserted twice",r),r.parentNode){Re.add(r);let o=r[p](g+"type");(a||"").match(/\/gtm.js\?/)||r[N]("async")||r[Ie]?(ee.push(r),we(a)):r[N]("defer")||o==="module"?(Le.push(r),we(a)):(a&&!r[N]("nomodule")&&!be[a]&&kt(a,o==="module",r[N]("crossorigin")&&r[p]("crossorigin"),r[p]("integrity")),_e.push(r))}else r[v](f,o=>o.target.parentNode[Q](o.target)),r[v](me,o=>o.target.parentNode[Q](o.target)),s[U](r)}else r[T]==="LINK"&&r[p]("as")==="script"&&(be[r[p]("href")]=!0)})})}),bt={childList:!0,subtree:!0};ze.observe(c.documentElement,bt);var Mt=HTMLElement[y].attachShadow;HTMLElement[y].attachShadow=function(e){let t=Mt.call(this,e);return e.mode==="open"&&ze.observe(t,bt),t};(()=>{let e=x[Ae](HTMLIFrameElement[y],"src");b(HTMLIFrameElement[y],"src",{get(){return this.dataset.fpoSrc?this.dataset.fpoSrc:e.get.call(this)},set(t){delete this.dataset.fpoSrc,e.set.call(this,t)}})})();D.on(M,()=>{(!De||De===ke)&&(Document[y].createElement=Lt,ze.disconnect()),dispatchEvent(new CustomEvent(he)),dispatchEvent(new CustomEvent(M))});var Me=e=>{let t,n;!c.currentScript||!c.currentScript.parentNode?(t=c.body,n=t.lastChild):(n=c.currentScript,t=n.parentNode);try{let s=le("div");s.innerHTML=e,Array.from(s.childNodes).forEach(r=>{r.nodeName===Y?t.insertBefore(xt(r),n):t.insertBefore(r,n)})}catch(s){$(s)}},pt=e=>Me(e+`
 `);Ve(c,{write:{get(){return Me},set(e){return Me=e}},writeln:{get(){return pt},set(e){return pt=e}}});var ft=(e,t,...n)=>{if(I+m==oe&&e===m&&!t.toString().match(/jQueryMock/)){D.on(M,d[v].bind(d,e,t,...n));return}if(I+f==oe&&e===f){D.on(M,d[v].bind(d,e,t,...n));return}if(t&&(e===f||e===B||e===m||e===A&&!se)){let s=e===m?ce+e:I+e;h[s]=h[s]||[],h[s].push(t),se&&K([e]);return}return G(e,t,...n)},Et=(e,t,...n)=>{if(e===f||e===m||e===B){let s=e===m?ce+e:I+e;We(s,t)}return _t(e,t,...n)};Ve(d,{[v]:{get(){return ft},set(){return ft}},[ue]:{get(){return Et},set(){return Et}}});var Ye=e=>{let t;return{get(){return t},set(n){return t&&We(e,n),h[e]=h[e]||[],h[e].push(n),t=n}}};G(Je,e=>{let{target:t,event:n}=e.detail,s=t===d?c.body:t,r=s[p](g+"on"+n.type);s[pe](g+"on"+n.type);try{let a=new Function("event",r);t===d?d[v](f,a.bind(t,n)):a.call(t,n)}catch(a){console.err(a)}});{let e=Ye(I+f);b(d,"onload",e),ae(m,()=>{b(c.body,"onload",e)})}b(c,"onreadystatechange",Ye(ce+w));b(d,"onmessage",Ye(I+A));(()=>{let e=d.innerHeight,t=d.innerWidth,n=r=>{let o={"4g":1250,"3g":2500,"2g":2500}[(navigator.connection||{}).effectiveType]||0,i=r.getBoundingClientRect(),l={top:-1*e-o,left:-1*t-o,bottom:e+o,right:t+o};return!(i.left>=l.right||i.right<=l.left||i.top>=l.bottom||i.bottom<=l.top)},s=(r=!0)=>{let a=1,o=-1,i={},l=()=>{o++,--a||d[ie](D.emit.bind(D,Se),_wpmeteor.rdelay)};Array.from(c.getElementsByTagName("*")).forEach(u=>{let E,q,J;if(u[T]==="IMG"){let _=u.currentSrc||u.src;_&&!i[_]&&!_.match(/^data:/i)&&((u.loading||"").toLowerCase()!=="lazy"||n(u))&&(E=_)}else if(u[T]===Y)we(u[p](g+"src"));else if(u[T]==="LINK"&&u[p]("as")==="script"&&["pre"+f,"modulepre"+f].indexOf(u[p]("rel"))>=0)be[u[p]("href")]=!0;else if((q=d.getComputedStyle(u))&&(J=(q.backgroundImage||"").match(/^url\s*\((.*?)\)/i))&&(J||[]).length){let _=J[0].slice(4,-1).replace(/"/g,"");!i[_]&&!_.match(/^data:/i)&&(E=_)}if(E){i[E]=!0;let _=new Image;r&&(a++,_[v](f,l),_[v](me,l)),_.src=E}}),c.fonts.ready.then(()=>{l()})};_wpmeteor.rdelay===0?ae(m,s):G(f,s)})();})();
 //1.0.42
 
@@ -29,18 +29,18 @@
 	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
 
 	<!-- This site is optimized with the Yoast SEO plugin v26.2 - https://yoast.com/wordpress/plugins/seo/ -->
-	<title>Benefits of Headless Commerce - Bilberrry</title>
+	<title>Benefits of Headless Commerce - TGlobal</title>
 	<meta name="description" content="Explore the benefits of headless commerce, as well as considerations for determining whether it&#039;s the right fit for your business." />
 	<link rel="canonical" href="index.html" />
 	<meta property="og:locale" content="en_US" />
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content="Benefits of Headless Commerce - Bilberrry" />
+	<meta property="og:title" content="Benefits of Headless Commerce - TGlobal" />
 	<meta property="og:description" content="Explore the benefits of headless commerce, as well as considerations for determining whether it&#039;s the right fit for your business." />
-	<meta property="og:url" content="https://bilberrry.com/notes/headless-commerce-benefits/" />
-	<meta property="og:site_name" content="Bilberrry" />
+	<meta property="og:url" content="#/notes/headless-commerce-benefits/" />
+	<meta property="og:site_name" content="TGlobal" />
 	<meta property="article:published_time" content="2023-05-15T21:54:04+00:00" />
 	<meta property="article:modified_time" content="2023-05-15T22:54:58+00:00" />
-	<meta property="og:image" content="https://bilberrry.com/wp-content/uploads/2023/05/headlesscommerce.jpg" />
+	<meta property="og:image" content="#/wp-content/uploads/2023/05/headlesscommerce.jpg" />
 	<meta property="og:image:width" content="2048" />
 	<meta property="og:image:height" content="1365" />
 	<meta property="og:image:type" content="image/jpeg" />
@@ -50,7 +50,7 @@
 	<meta name="twitter:data1" content="admin" />
 	<meta name="twitter:label2" content="Est. reading time" />
 	<meta name="twitter:data2" content="5 minutes" />
-	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://bilberrry.com/notes/headless-commerce-benefits/","url":"https://bilberrry.com/notes/headless-commerce-benefits/","name":"Benefits of Headless Commerce - Bilberrry","isPartOf":{"@id":"https://bilberrry.com/#website"},"primaryImageOfPage":{"@id":"https://bilberrry.com/notes/headless-commerce-benefits/#primaryimage"},"image":{"@id":"https://bilberrry.com/notes/headless-commerce-benefits/#primaryimage"},"thumbnailUrl":"https://bilberrry.com/wp-content/uploads/2023/05/headlesscommerce.jpg","datePublished":"2023-05-15T21:54:04+00:00","dateModified":"2023-05-15T22:54:58+00:00","author":{"@id":"https://bilberrry.com/#/schema/person/d6d4d55d8849683ccd570356b531147c"},"description":"Explore the benefits of headless commerce, as well as considerations for determining whether it's the right fit for your business.","breadcrumb":{"@id":"https://bilberrry.com/notes/headless-commerce-benefits/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://bilberrry.com/notes/headless-commerce-benefits/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://bilberrry.com/notes/headless-commerce-benefits/#primaryimage","url":"https://bilberrry.com/wp-content/uploads/2023/05/headlesscommerce.jpg","contentUrl":"https://bilberrry.com/wp-content/uploads/2023/05/headlesscommerce.jpg","width":2048,"height":1365},{"@type":"BreadcrumbList","@id":"https://bilberrry.com/notes/headless-commerce-benefits/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://bilberrry.com/"},{"@type":"ListItem","position":2,"name":"Notes","item":"https://bilberrry.com/notes/"},{"@type":"ListItem","position":3,"name":"Benefits of Headless Commerce"}]},{"@type":"WebSite","@id":"https://bilberrry.com/#website","url":"https://bilberrry.com/","name":"Bilberrry","description":"A Trusted Website &amp; App Development Agency","inLanguage":"en-US"},{"@type":"Person","@id":"https://bilberrry.com/#/schema/person/d6d4d55d8849683ccd570356b531147c","name":"admin","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://bilberrry.com/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/79b996dba104e4339d6cf2fbac676028598b7b341ca51bdbcf8307733f21f4ec?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/79b996dba104e4339d6cf2fbac676028598b7b341ca51bdbcf8307733f21f4ec?s=96&d=mm&r=g","caption":"admin"},"sameAs":["https://bilberrry.com"],"url":"https://bilberrry.com/notes/author/admin/"}]}</script>
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"#/notes/headless-commerce-benefits/","url":"#/notes/headless-commerce-benefits/","name":"Benefits of Headless Commerce - TGlobal","isPartOf":{"@id":"#/#website"},"primaryImageOfPage":{"@id":"#/notes/headless-commerce-benefits/#primaryimage"},"image":{"@id":"#/notes/headless-commerce-benefits/#primaryimage"},"thumbnailUrl":"#/wp-content/uploads/2023/05/headlesscommerce.jpg","datePublished":"2023-05-15T21:54:04+00:00","dateModified":"2023-05-15T22:54:58+00:00","author":{"@id":"#/#/schema/person/d6d4d55d8849683ccd570356b531147c"},"description":"Explore the benefits of headless commerce, as well as considerations for determining whether it's the right fit for your business.","breadcrumb":{"@id":"#/notes/headless-commerce-benefits/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["#/notes/headless-commerce-benefits/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"#/notes/headless-commerce-benefits/#primaryimage","url":"#/wp-content/uploads/2023/05/headlesscommerce.jpg","contentUrl":"#/wp-content/uploads/2023/05/headlesscommerce.jpg","width":2048,"height":1365},{"@type":"BreadcrumbList","@id":"#/notes/headless-commerce-benefits/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"#/"},{"@type":"ListItem","position":2,"name":"Notes","item":"#/notes/"},{"@type":"ListItem","position":3,"name":"Benefits of Headless Commerce"}]},{"@type":"WebSite","@id":"#/#website","url":"#/","name":"TGlobal","description":"A Trusted Website &amp; App Development Agency","inLanguage":"en-US"},{"@type":"Person","@id":"#/#/schema/person/d6d4d55d8849683ccd570356b531147c","name":"admin","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"#/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/79b996dba104e4339d6cf2fbac676028598b7b341ca51bdbcf8307733f21f4ec?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/79b996dba104e4339d6cf2fbac676028598b7b341ca51bdbcf8307733f21f4ec?s=96&d=mm&r=g","caption":"admin"},"sameAs":["#"],"url":"#/notes/author/admin/"}]}</script>
 	<!-- / Yoast SEO plugin. -->
 
 
@@ -92,22 +92,22 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 <link rel='stylesheet' id='slick-css' href='../../wp-content/themes/bilberrry/assets/libs/slick/slick.min7d04.css?ver=111902092025' type='text/css' media='all' />
 <link rel='stylesheet' id='theme-style-light-css' href='../../wp-content/themes/bilberrry/assets/css/light.css?ver=111902092025' type='text/css' media='all' />
 <link rel='stylesheet' id='theme-style-dark-css' href='../../wp-content/themes/bilberrry/assets/css/dark.css?ver=111902092025' type='text/css' media='all' />
-<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="https://bilberrry.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
-<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="https://bilberrry.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
-<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="alternate" title="JSON" type="application/json" href="https://bilberrry.com/wp-json/wp/v2/posts/1775" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.html?rsd" />
-<link rel='shortlink' href='https://bilberrry.com/?p=1775' />
-<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://bilberrry.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbilberrry.com%2Fnotes%2Fheadless-commerce-benefits%2F" />
-<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://bilberrry.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbilberrry.com%2Fnotes%2Fheadless-commerce-benefits%2F&amp;format=xml" />
-<link rel="icon" href="../../wp-content/uploads/2020/06/cropped-Bilberrry-favicon-512px-copy-150x150.png" sizes="32x32" />
-<link rel="icon" href="../../wp-content/uploads/2020/06/cropped-Bilberrry-favicon-512px-copy-300x300.png" sizes="192x192" />
-<link rel="apple-touch-icon" href="../../wp-content/uploads/2020/06/cropped-Bilberrry-favicon-512px-copy-300x300.png" />
-<meta name="msapplication-TileImage" content="https://bilberrry.com/wp-content/uploads/2020/06/cropped-Bilberrry-favicon-512px-copy-300x300.png" />
-<link rel="icon" href="../../wp-content/uploads/2020/06/cropped-Bilberrry-favicon-512px-copy-150x150.png" sizes="32x32" />
-<link rel="icon" href="../../wp-content/uploads/2020/06/cropped-Bilberrry-favicon-512px-copy-300x300.png" sizes="192x192" />
-<link rel="apple-touch-icon" href="../../wp-content/uploads/2020/06/cropped-Bilberrry-favicon-512px-copy-300x300.png" />
-<meta name="msapplication-TileImage" content="https://bilberrry.com/wp-content/uploads/2020/06/cropped-Bilberrry-favicon-512px-copy-300x300.png" />
+<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="#/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="#/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="alternate" title="JSON" type="application/json" href="#/wp-json/wp/v2/posts/1775" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.html?rsd" />
+<link rel='shortlink' href='#/?p=1775' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="#/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbilberrry.com%2Fnotes%2Fheadless-commerce-benefits%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="#/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbilberrry.com%2Fnotes%2Fheadless-commerce-benefits%2F&amp;format=xml" />
+<link rel="icon" href="../../wp-content/uploads/2020/06/cropped-TGlobal-favicon-512px-copy-150x150.png" sizes="32x32" />
+<link rel="icon" href="../../wp-content/uploads/2020/06/cropped-TGlobal-favicon-512px-copy-300x300.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="../../wp-content/uploads/2020/06/cropped-TGlobal-favicon-512px-copy-300x300.png" />
+<meta name="msapplication-TileImage" content="#/wp-content/uploads/2020/06/cropped-TGlobal-favicon-512px-copy-300x300.png" />
+<link rel="icon" href="../../wp-content/uploads/2020/06/cropped-TGlobal-favicon-512px-copy-150x150.png" sizes="32x32" />
+<link rel="icon" href="../../wp-content/uploads/2020/06/cropped-TGlobal-favicon-512px-copy-300x300.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="../../wp-content/uploads/2020/06/cropped-TGlobal-favicon-512px-copy-300x300.png" />
+<meta name="msapplication-TileImage" content="#/wp-content/uploads/2020/06/cropped-TGlobal-favicon-512px-copy-300x300.png" />
 </head>
-<body class="wp-singular post-template-default single single-post postid-1775 single-format-standard wp-theme-bilberrry">
+<body class="wp-singular post-template-default single single-post postid-1775 single-format-standard wp-theme-tglobal">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFK45T7"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -152,8 +152,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<div>
 		<div class="logo-icon">
 			<a href="../../index.html">
-				<img class="dark-theme-only" src="../../wp-content/themes/bilberrry/assets/images/logo_icon_dark.svg" alt="Bilberrry">
-				<img class="light-theme-only" src="../../wp-content/themes/bilberrry/assets/images/logo_icon_light.svg" alt="Bilberrry">
+				<img class="dark-theme-only" src="../../wp-content/themes/bilberrry/assets/images/logo_icon_dark.svg" alt="TGlobal">
+				<img class="light-theme-only" src="../../wp-content/themes/bilberrry/assets/images/logo_icon_light.svg" alt="TGlobal">
 			</a>
 		</div>
 
@@ -179,8 +179,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div class="col">
 
 				<a class="logo" href="../../index.html">
-					<img class="dark-theme-only" src="../../wp-content/themes/bilberrry/assets/images/logo-white.svg" alt="Bilberrry">
-					<img class="light-theme-only" src="../../wp-content/themes/bilberrry/assets/images/logo-dark.svg" alt="Bilberrry">
+					<img class="dark-theme-only" src="../../wp-content/themes/bilberrry/assets/images/logo-white.svg" alt="TGlobal">
+					<img class="light-theme-only" src="../../wp-content/themes/bilberrry/assets/images/logo-dark.svg" alt="TGlobal">
 				</a>
 
 			</div>
@@ -227,10 +227,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 					<picture style="padding-top: 57.47%;" class="master-image lazy">
 
-						<data-src srcset="https://bilberrry.com/wp-content/uploads/2023/05/headlesscommerce-1900x1092.jpg 2x, https://bilberrry.com/wp-content/uploads/2023/05/headlesscommerce-950x546.jpg 1x" media="(min-width: 1200px)"></data-src>
+						<data-src srcset="#/wp-content/uploads/2023/05/headlesscommerce-1900x1092.jpg 2x, #/wp-content/uploads/2023/05/headlesscommerce-950x546.jpg 1x" media="(min-width: 1200px)"></data-src>
 
 
-  					<data-img src="https://bilberrry.com/wp-content/uploads/2023/05/headlesscommerce-950x546.jpg"></data-img>
+  					<data-img src="#/wp-content/uploads/2023/05/headlesscommerce-950x546.jpg"></data-img>
 					</picture>
 
 					<img class="placeholder" src="../../wp-content/uploads/2023/05/headlesscommerce-42x42.jpg" alt="">
@@ -285,7 +285,7 @@ While headless commerce can accelerate development cycles, it may not be suitabl
 Headless commerce separates the front-end from the back-end, which means content management becomes more complex. You will need a robust CMS or content management strategy to effectively manage and deliver content across multiple channels. If content management is a critical aspect of your e-commerce operations, carefully assess how a headless architecture will impact your ability to manage and optimize content effectively.</p>
 <h3>In Conclusion</h3>
 <p>Headless commerce offers significant advantages for businesses looking to enhance flexibility, deliver personalized customer experiences, and stay ahead in the competitive e-commerce landscape. However, it&#8217;s important to carefully evaluate the suitability of a headless approach for your specific business needs. Consider factors such as complexity, expertise, project scope, budget, time to market, and content management requirements before making a decision. By conducting a thorough assessment, you can determine whether headless commerce is the right fit for your business and leverage its benefits to drive growth and success in the digital marketplace.</p>
-<p>If you are interested in learning more about Bilberrry’s <a href="../../headless-ecommerce-development/index.html">headless commerce capabilities</a>, and whether this approach is right for you, please feel free to <a href="../../contact/index.html">get in touch</a>.</p>
+<p>If you are interested in learning more about TGlobal’s <a href="../../headless-ecommerce-development/index.html">headless commerce capabilities</a>, and whether this approach is right for you, please feel free to <a href="../../contact/index.html">get in touch</a>.</p>
 					</div>
 				</div>
 
@@ -315,7 +315,7 @@ Headless commerce separates the front-end from the back-end, which means content
 
 					<picture style="padding-top: 57.22%;" class="master-image lazy">
 
-						<data-src srcset="https://bilberrry.com/wp-content/uploads/2021/08/cody-hiscox-Hp5Acad1H0k-unsplash-scaled-720x412.jpg 2x, https://bilberrry.com/wp-content/uploads/2021/08/cody-hiscox-Hp5Acad1H0k-unsplash-scaled-360x206.jpg 1x" media="(min-width: 1200px)"></data-src>
+						<data-src srcset="#/wp-content/uploads/2021/08/cody-hiscox-Hp5Acad1H0k-unsplash-scaled-720x412.jpg 2x, #/wp-content/uploads/2021/08/cody-hiscox-Hp5Acad1H0k-unsplash-scaled-360x206.jpg 1x" media="(min-width: 1200px)"></data-src>
 
 
   					<data-img src="../../wp-content/uploads/2021/08/cody-hiscox-Hp5Acad1H0k-unsplash-scaled-360x206.jpg"></data-img>
@@ -338,7 +338,7 @@ Headless commerce separates the front-end from the back-end, which means content
 									<div class="col-md-4 item-post">
 
 													<div class="thumb">
-								<a href="https://bilberrry.com/notes/intro-to-web-apps/">
+								<a href="#/notes/intro-to-web-apps/">
 												<div class="shortcode progressive-image  ">
 
 
@@ -346,13 +346,13 @@ Headless commerce separates the front-end from the back-end, which means content
 
 					<picture style="padding-top: 57.22%;" class="master-image lazy">
 
-						<data-src srcset="https://bilberrry.com/wp-content/uploads/2021/04/freestocks-ZArDeAtxj0Q-unsplash-scaled-720x412.jpg 2x, https://bilberrry.com/wp-content/uploads/2021/04/freestocks-ZArDeAtxj0Q-unsplash-scaled-360x206.jpg 1x" media="(min-width: 1200px)"></data-src>
+						<data-src srcset="#/wp-content/uploads/2021/04/freestocks-ZArDeAtxj0Q-unsplash-scaled-720x412.jpg 2x, #/wp-content/uploads/2021/04/freestocks-ZArDeAtxj0Q-unsplash-scaled-360x206.jpg 1x" media="(min-width: 1200px)"></data-src>
 
 
-  					<data-img src="https://bilberrry.com/wp-content/uploads/2021/04/freestocks-ZArDeAtxj0Q-unsplash-scaled-360x206.jpg"></data-img>
+  					<data-img src="#/wp-content/uploads/2021/04/freestocks-ZArDeAtxj0Q-unsplash-scaled-360x206.jpg"></data-img>
 					</picture>
 
-					<img class="placeholder" src="https://bilberrry.com/wp-content/uploads/2021/04/freestocks-ZArDeAtxj0Q-unsplash-scaled-42x42.jpg" alt="">
+					<img class="placeholder" src="#/wp-content/uploads/2021/04/freestocks-ZArDeAtxj0Q-unsplash-scaled-42x42.jpg" alt="">
 
 
 
@@ -363,13 +363,13 @@ Headless commerce separates the front-end from the back-end, which means content
 										</a>
 							</div>
 
-						<a href="https://bilberrry.com/notes/intro-to-web-apps/"><h3><span>Intro to web apps</span></h3></a>
+						<a href="#/notes/intro-to-web-apps/"><h3><span>Intro to web apps</span></h3></a>
 
 					</div>
 									<div class="col-md-4 item-post">
 
 													<div class="thumb">
-								<a href="https://bilberrry.com/notes/build-or-buy-the-custom-software-question/">
+								<a href="#/notes/build-or-buy-the-custom-software-question/">
 												<div class="shortcode progressive-image  ">
 
 
@@ -377,13 +377,13 @@ Headless commerce separates the front-end from the back-end, which means content
 
 					<picture style="padding-top: 57.22%;" class="master-image lazy">
 
-						<data-src srcset="https://bilberrry.com/wp-content/uploads/2021/04/jade-scarlato-qbXP18rappM-unsplash-scaled-720x412.jpg 2x, https://bilberrry.com/wp-content/uploads/2021/04/jade-scarlato-qbXP18rappM-unsplash-scaled-360x206.jpg 1x" media="(min-width: 1200px)"></data-src>
+						<data-src srcset="#/wp-content/uploads/2021/04/jade-scarlato-qbXP18rappM-unsplash-scaled-720x412.jpg 2x, #/wp-content/uploads/2021/04/jade-scarlato-qbXP18rappM-unsplash-scaled-360x206.jpg 1x" media="(min-width: 1200px)"></data-src>
 
 
-  					<data-img src="https://bilberrry.com/wp-content/uploads/2021/04/jade-scarlato-qbXP18rappM-unsplash-scaled-360x206.jpg"></data-img>
+  					<data-img src="#/wp-content/uploads/2021/04/jade-scarlato-qbXP18rappM-unsplash-scaled-360x206.jpg"></data-img>
 					</picture>
 
-					<img class="placeholder" src="https://bilberrry.com/wp-content/uploads/2021/04/jade-scarlato-qbXP18rappM-unsplash-scaled-42x42.jpg" alt="">
+					<img class="placeholder" src="#/wp-content/uploads/2021/04/jade-scarlato-qbXP18rappM-unsplash-scaled-42x42.jpg" alt="">
 
 
 
@@ -394,7 +394,7 @@ Headless commerce separates the front-end from the back-end, which means content
 										</a>
 							</div>
 
-						<a href="https://bilberrry.com/notes/build-or-buy-the-custom-software-question/"><h3><span>Build or buy? The custom software question</span></h3></a>
+						<a href="#/notes/build-or-buy-the-custom-software-question/"><h3><span>Build or buy? The custom software question</span></h3></a>
 
 					</div>
 
@@ -411,8 +411,8 @@ Headless commerce separates the front-end from the back-end, which means content
 			<div class="col-6 col-sm-7">
 
 				<a class="logo" href="../../index.html">
-					<img class="dark-theme-only" src="../../wp-content/themes/bilberrry/assets/images/logo-white.svg" alt="Bilberrry">
-					<img class="light-theme-only" src="../../wp-content/themes/bilberrry/assets/images/logo-dark.svg" alt="Bilberrry">
+					<img class="dark-theme-only" src="../../wp-content/themes/bilberrry/assets/images/logo-white.svg" alt="TGlobal">
+					<img class="light-theme-only" src="../../wp-content/themes/bilberrry/assets/images/logo-dark.svg" alt="TGlobal">
 				</a>
 
 				<nav>
@@ -443,7 +443,7 @@ WITH US?</h2>
 			</div>
 			<div class="col-sm-5">
 
-									<p>Blueberry Technologies LLC DBA Bilberrry </p>
+									<p>Blueberry Technologies LLC DBA TGlobal </p>
 
 			</div>
 		</div>
@@ -453,14 +453,14 @@ WITH US?</h2>
 <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/bilberrry\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
-<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="https://bilberrry.com/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
-<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="https://bilberrry.com/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="#/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
+<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="#/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
 <script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="wp-i18n-js-after">
 /* <![CDATA[ */
 wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 /* ]]> */
 </script>
-<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="https://bilberrry.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.1.2" id="swv-js"></script>
+<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="#/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.1.2" id="swv-js"></script>
 <script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="contact-form-7-js-before">
 /* <![CDATA[ */
 var wpcf7 = {
@@ -472,28 +472,28 @@ var wpcf7 = {
 };
 /* ]]> */
 </script>
-<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="https://bilberrry.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1.2" id="contact-form-7-js"></script>
-<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="https://bilberrry.com/wp-content/themes/bilberrry/assets/libs/lazy/jquery.lazy.min.js?ver=111902092025" id="lazy-js"></script>
-<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="https://bilberrry.com/wp-content/themes/bilberrry/assets/libs/lazy/jquery.lazy.picture.min.js?ver=111902092025" id="lazy-picture-js"></script>
-<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="https://bilberrry.com/wp-content/themes/bilberrry/assets/libs/slick/slick.min.js?ver=111902092025" id="slick-js"></script>
-<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="https://bilberrry.com/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js"></script>
-<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="https://bilberrry.com/wp-content/themes/bilberrry/assets/libs/midnight/midnight.jquery.min.js?ver=111902092025" id="midnight-js"></script>
-<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="https://bilberrry.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
-<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="https://bilberrry.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3" id="jquery-ui-datepicker-js"></script>
+<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="#/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1.2" id="contact-form-7-js"></script>
+<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="#/wp-content/themes/bilberrry/assets/libs/lazy/jquery.lazy.min.js?ver=111902092025" id="lazy-js"></script>
+<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="#/wp-content/themes/bilberrry/assets/libs/lazy/jquery.lazy.picture.min.js?ver=111902092025" id="lazy-picture-js"></script>
+<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="#/wp-content/themes/bilberrry/assets/libs/slick/slick.min.js?ver=111902092025" id="slick-js"></script>
+<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="#/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js"></script>
+<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="#/wp-content/themes/bilberrry/assets/libs/midnight/midnight.jquery.min.js?ver=111902092025" id="midnight-js"></script>
+<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="#/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="#/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3" id="jquery-ui-datepicker-js"></script>
 <script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="jquery-ui-datepicker-js-after">
 /* <![CDATA[ */
 jQuery(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
 /* ]]> */
 </script>
-<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="https://bilberrry.com/wp-content/themes/bilberrry/assets/libs/jquery.cookie.js?ver=111902092025" id="cookie-js"></script>
+<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="#/wp-content/themes/bilberrry/assets/libs/jquery.cookie.js?ver=111902092025" id="cookie-js"></script>
 <script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="theme-front-js-extra">
 /* <![CDATA[ */
 var jsVars = {"ajaxurl":"https:\/\/bilberrry.com\/wp-admin\/admin-ajax.php","currTheme":"dark"};
 /* ]]> */
 </script>
-<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="https://bilberrry.com/wp-content/themes/bilberrry/assets/js/theme.min.js?ver=111902092025" id="theme-front-js"></script>
+<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="#/wp-content/themes/bilberrry/assets/js/theme.min.js?ver=111902092025" id="theme-front-js"></script>
 <script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="https://www.google.com/recaptcha/api.js?render=6Lf5u6UZAAAAAN2MhMekf52c26LyheLhUHt6iaxL&amp;ver=3.0" id="google-recaptcha-js"></script>
-<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="https://bilberrry.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="#/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
 <script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="wpcf7-recaptcha-js-before">
 /* <![CDATA[ */
 var wpcf7_recaptcha = {
@@ -505,8 +505,8 @@ var wpcf7_recaptcha = {
 };
 /* ]]> */
 </script>
-<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="https://bilberrry.com/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=6.1.2" id="wpcf7-recaptcha-js"></script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a0dada4c888a797',t:'MTc2MzUzNDAzMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='https://bilberrry.com/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script data-cfasync="false" type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="#/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=6.1.2" id="wpcf7-recaptcha-js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a0dada4c888a797',t:'MTc2MzUzNDAzMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='#/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 
 <!-- Mirrored from bilberrry.com/notes/headless-commerce-benefits/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Nov 2025 06:35:34 GMT -->
 </html>
