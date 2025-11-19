@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html class="no-js html" lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+
+    <title>Bilberrry - A Full-Service Digital Innovation Agency</title>
+
+    <!-- PRELOAD FONTS -->
+    <link
+      rel="preload"
+      as="font"
+      href="assets/fonts/subset-SuisseIntl-Medium.woff2"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="assets/fonts/subset-SuisseIntl-Light.woff2"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="assets/fonts/subset-SuisseIntl-Bold.woff2"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="assets/fonts/subset-SuisseIntl.woff2"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <!-- FAVICONS -->
+    <link
+      rel="icon"
+      href="assets/images/cropped-Bilberrry-favicon-512px-copy-150x150.png"
+      sizes="32x32"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="assets/images/cropped-Bilberrry-favicon-512px-copy-300x300.png"
+    />
+
+    <!-- EXTERNAL CSS LIBRARIES -->
+    <!-- I assumed you renamed the wp-includes style to vendor.css. If not, rename it or delete this line -->
+    <link
+      rel="stylesheet"
+      id="vendor-css"
+      href="assets/css/vendor.css"
+      type="text/css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      id="bootstrap-reboot-css"
+      href="assets/libs/bootstrap/bootstrap-reboot.min7d04.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="bootstrap-grid-css"
+      href="assets/libs/bootstrap/bootstrap-grid.min7d04.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="slick-css"
+      href="assets/libs/slick/slick.min7d04.css"
+      type="text/css"
+      media="all"
+    />
+
+    <!-- MAIN CSS FILES -->
+    <link
+      rel="stylesheet"
+      id="theme-style-light-css"
+      href="assets/css/light.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="theme-style-dark-css"
+      href="assets/css/main.css"
+      type="text/css"
+      media="all"
+    />
+
+    <!-- CRITICAL INLINE CSS (Keep this for layout stability) -->
+    <style id="critical-css">
+      a.theme-switcher-link {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        outline: 0;
+        display: block;
+        width: 24px;
+        height: 15px;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        border-radius: 10px;
+        padding: 0;
+        margin-top: -4px;
+      }
+      a.theme-switcher-link:before {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 13px;
+        height: 13px;
+        transition: none;
+        opacity: 1;
+        bottom: auto;
+        top: 0;
+        left: auto;
+        transition: all 0.2s ease;
+        border-radius: 50%;
+        background: #fff;
+      }
+      a.theme-switcher-link:after {
+        display: none;
+      }
+      .theme-light a.theme-switcher-link {
+        border: 1px solid transparent;
+      }
+      .theme-light a.theme-switcher-link:before {
+        right: 0;
+      }
+      .theme-dark a.theme-switcher-link:before {
+        right: 10px;
+      }
+      .theme-switcher-link.mobile-only {
+        margin-left: 30px;
+        margin-bottom: 5px;
+      }
+      #header {
+        position: fixed;
+        z-index: 998;
+        left: 0;
+        right: 0;
+        top: 0;
+      }
+      #header .container,
+      #header .row {
+        height: 100%;
+      }
+      #header .logo:after {
+        display: none;
+      }
+      .admin-bar #header {
+        top: 32px;
+      }
+      @media (max-width: 782px) {
+        .admin-bar #header {
+          top: 46px;
+        }
+      }
+      @media (max-width: 600px) {
+        .admin-bar #header {
+          top: 0;
+        }
+      }
+      @media (max-width: 600px) {
+        html.html {
+          margin-top: 0 !important;
+        }
+        html.html #wpadminbar {
+          display: none !important;
+        }
+      }
+      @media (min-width: 820px) {
+        #mobile-menu {
+          display: none;
+        }
+        #header .row {
+          height: 95px;
+        }
+        #header .container {
+          max-width: 1440px;
+          padding-left: 55px;
+          padding-right: 55px;
+        }
+        #header nav ul.menu {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          justify-content: flex-end;
+        }
+        #header nav ul.menu > .menu-item {
+          display: block;
+          margin: 0 40px 0 0;
+          padding: 0;
+          font-size: 17px;
+        }
+        #header nav ul.menu > .menu-item > a {
+          display: block;
+        }
+        #header nav ul.menu > .menu-item-has-children > a {
+          padding-right: 20px;
+          background-position: right 7px;
+          background-repeat: no-repeat;
+        }
+        #header nav ul.menu > .menu-item-has-children.is-active > a:focus:after,
+        #header
+          nav
+          ul.menu
+          > .menu-item-has-children.is-active
+          > a:active:after {
+          display: none !important;
+        }
+        #header nav ul.menu li:last-of-type {
+          margin-right: 0;
+        }
+        #content {
+          padding-top: 95px;
+        }
+        .theme-dark #header nav ul.menu > .menu-item-has-children > a,
+        .theme-light
+          #header
+          .midnightHeader.white
+          nav
+          ul.menu
+          > .menu-item-has-children
+          > a {
+          background-image: url(assets/images/menu-down-white.svg);
+        }
+        .theme-dark #header nav ul.menu > .menu-item-has-children.is-active > a,
+        .theme-light
+          #header
+          .midnightHeader.white
+          nav
+          ul.menu
+          > .menu-item-has-children.is-active
+          > a {
+          background-image: url(assets/images/menu-up-white.svg);
+        }
+        .theme-light #header nav ul.menu > .menu-item-has-children > a,
+        .is-services-open.theme-light
+          #header
+          .midnightHeader.white
+          nav
+          ul.menu
+          > .menu-item-has-children
+          > a {
+          background-image: url(assets/images/menu-down-dark.svg);
+        }
+        .theme-light
+          #header
+          nav
+          ul.menu
+          > .menu-item-has-children.is-active
+          > a,
+        .is-services-open.theme-light
+          #header
+          .midnightHeader.white
+          nav
+          ul.menu
+          > .menu-item-has-children.is-active
+          > a {
+          background-image: url(assets/images/menu-up-dark.svg);
+        }
+      }
+      @media (max-width: 1170px) {
+        #header .container {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+      }
+      @media (max-width: 820px) {
+        #mobile-menu {
+          display: block;
+          position: fixed;
+          z-index: 999;
+          width: 40%;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          padding: 50px;
+          display: flex;
+          opacity: 0;
+          transform: translateX(-100%);
+          transition: transform 0.2s;
+        }
+      }
+      @media (max-width: 820px) and (max-width: 767px) {
+        #mobile-menu {
+          width: 75%;
+        }
+      }
+      @media (max-width: 820px) {
+        #mobile-menu .logo-icon {
+          margin-bottom: 35px;
+        }
+        #mobile-menu .logo-icon a:after {
+          display: none;
+        }
+        #mobile-menu ul.menu {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+        #mobile-menu ul.menu > .menu-item {
+          font-size: 30px;
+          line-height: 0.93;
+          margin: 0 0 15px 0;
+          padding: 0;
+          display: block;
+        }
+        #mobile-menu ul.menu .menu-theme-switcher {
+          display: none;
+        }
+        #mobile-menu ul.menu > .menu-item-has-children .sub-menu {
+          display: none;
+        }
+        #mobile-menu ul.menu > .menu-item-has-children > a {
+          padding-right: 22px;
+          white-space: nowrap;
+          background: url(assets/images/menu-down-dark.svg) right center
+            no-repeat;
+        }
+        #mobile-menu ul.menu > .menu-item-has-children .sub-menu a:after {
+          display: none !important;
+        }
+        #mobile-menu
+          ul.menu
+          > .menu-item-has-children
+          .sub-menu
+          .current-menu-item
+          a {
+          box-shadow: inset 0 -1px 0 0 #3b3b3b, inset 0 -1px 0 0 #3b3b3b;
+        }
+        #mobile-menu ul.menu > .menu-item-has-children.is-active > a {
+          background-image: url(assets/images/menu-up-dark.svg);
+        }
+        #mobile-menu ul.sub-menu {
+          margin: 20px 0 20px 15px;
+          padding: 0 0 0 0;
+        }
+        #mobile-menu ul.sub-menu > .menu-item {
+          font-size: 16px;
+          line-height: 26px;
+          margin: 0 0 10px 0;
+          padding: 0;
+          display: block;
+        }
+        #mobile-menu ul.sub-menu > .menu-item br {
+          display: none;
+        }
+        .theme-light #mobile-menu ul.menu > .menu-item-has-children > a {
+          background-image: url(assets/images/menu-down-white.svg);
+        }
+        .theme-light
+          #mobile-menu
+          ul.menu
+          > .menu-item-has-children.is-active
+          > a {
+          background-image: url(assets/images/menu-up-white.svg);
+        }
+        .theme-light
+          #mobile-menu
+          ul.menu
+          > .menu-item-has-children
+          .sub-menu
+          .current-menu-item
+          a {
+          box-shadow: inset 0 -1px 0 0 #fff, inset 0 -1px 0 0 #fff;
+        }
+        #header .row {
+          height: 70px;
+        }
+        #header nav {
+          display: none;
+        }
+        #content {
+          padding-top: 70px;
+        }
+        .admin-bar #header nav {
+          top: 32px;
+        }
+      }
+      @media (max-width: 820px) and (max-width: 782px) {
+        .admin-bar #header nav {
+          top: 46px;
+        }
+      }
+      @media (max-width: 820px) and (max-width: 600px) {
+        .admin-bar #header nav {
+          top: 0;
+        }
+      }
+      @media (max-width: 820px) {
+        body.is-menu-open {
+          overflow: hidden;
+        }
+        body.is-menu-open #mobile-menu {
+          transform: translateX(0);
+          opacity: 1;
+          overflow: auto;
+        }
+        body.is-menu-open #mobile-menu ul li {
+          -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+          -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+        }
+        body.is-menu-open #menu-header-menu {
+          padding-bottom: 40px;
+        }
+      }
+      @media (max-width: 350px) {
+        #mobile-menu {
+          width: 85%;
+        }
+      }
+      a.mobile-menu-toggler {
+        width: 30px;
+        height: 30px;
+        display: none;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+        z-index: 9999;
+      }
+      a.mobile-menu-toggler:after {
+        display: none;
+      }
+      @media (max-width: 820px) {
+        a.mobile-menu-toggler {
+          display: flex;
+        }
+      }
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        transition-property: opacity, -webkit-filter;
+        transition-property: opacity, filter;
+        transition-property: opacity, filter, -webkit-filter;
+        transition-duration: 0.15s;
+        transition-timing-function: linear;
+        font: inherit;
+        color: inherit;
+        text-transform: none;
+        background-color: transparent;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+        height: 16px;
+      }
+      @media (max-width: 700px) {
+        .hamburger {
+          display: block;
+        }
+      }
+      .hamburger-box {
+        width: 22px;
+        height: 16px;
+        display: inline-block;
+        position: relative;
+      }
+      .hamburger-inner {
+        display: block;
+        top: 50%;
+        margin-top: -2px;
+      }
+      .hamburger-inner,
+      .hamburger-inner::before,
+      .hamburger-inner::after {
+        width: 22px;
+        height: 1px;
+        position: absolute;
+        transition-property: transform;
+        transition-duration: 0.15s;
+        transition-timing-function: ease;
+      }
+      .hamburger-inner::before,
+      .hamburger-inner::after {
+        content: "";
+        display: block;
+      }
+      .hamburger-inner::before {
+        top: -6px;
+      }
+      .hamburger-inner::after {
+        bottom: -6px;
+      }
+      .hamburger--squeeze .hamburger-inner {
+        transition-duration: 0.075s;
+        transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      }
+      .hamburger--squeeze .hamburger-inner::before {
+        transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+      }
+      .hamburger--squeeze .hamburger-inner::after {
+        transition: bottom 0.075s 0.12s ease,
+          transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      }
+      .hamburger--squeeze.is-active .hamburger-inner {
+        transform: rotate(45deg);
+        transition-delay: 0.12s;
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+      .hamburger--squeeze.is-active .hamburger-inner::before {
+        top: 0;
+        opacity: 0;
+        transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+      }
+      .hamburger--squeeze.is-active .hamburger-inner::after {
+        bottom: 0;
+        transform: rotate(-90deg);
+        transition: bottom 0.075s ease,
+          transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+      @media (min-width: 820px) {
+        .mobile-only {
+          display: none !important;
+        }
+      }
+      @media (max-width: 820px) {
+        .mobile-only {
+          display: block;
+        }
+      }
+      @-webkit-keyframes fadeInLeft {
+        from {
+          opacity: 0;
+          transform: translate3d(-100%, 0, 0);
+        }
+        to {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      @keyframes fadeInLeft {
+        from {
+          opacity: 0;
+          transform: translate3d(-100%, 0, 0);
+        }
+        to {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      .fadeInLeft {
+        -webkit-animation-name: fadeInLeft;
+        animation-name: fadeInLeft;
+      }
+    </style>
+  </head>
+
+  <body
+    class="home wp-singular page-template-default page page-id-2 wp-theme-bilberrry page-home"
+  >
+    <nav id="desktop-services-menu">
+      <div class="container container-fluid">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="menu-title">
+              <a href="digital-transformation.html"
+                >Digital<br />Transformation</a
+              >
+            </div>
+            <div class="menu-desc">
+              We partner with CTOs and CIOs to co-create and execute long-term
+              digital strategies.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="menu-title">
+              <a href="headless-ecommerce-development.html"
+                >Headless Commerce<br />& CMS Development</a
+              >
+            </div>
+            <div class="menu-desc">
+              We build high converting, fast-loading, headless eCommerce & CMS
+              websites.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="menu-title">
+              <a href="custom-software-development.html"
+                >Custom Software<br />Development</a
+              >
+            </div>
+            <div class="menu-desc">
+              We work with startups and global enterprises to design and develop
+              custom web & mobile apps.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="menu-title">
+              <a href="website-design-development.html"
+                >Website Design<br />& Development</a
+              >
+            </div>
+            <div class="menu-desc">
+              We design and develop beautiful websites that deliver
+              best-in-class experiences.
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <nav id="mobile-menu">
+      <div>
+        <div class="logo-icon">
+          <a href="index.html">
+            <img
+              class="dark-theme-only"
+              src="assets/images/logo_icon_dark.svg"
+              alt="Bilberrry"
+            />
+            <img
+              class="light-theme-only"
+              src="assets/images/logo_icon_light.svg"
+              alt="Bilberrry"
+            />
+          </a>
+        </div>
+
+        <ul id="menu-header-menu" class="menu">
+          <li class="menu-item-services menu-item menu-item-has-children">
+            <a href="#">Services</a>
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="digital-transformation.html"
+                  >Digital<br />Transformation</a
+                >
+              </li>
+              <li class="menu-item">
+                <a href="headless-ecommerce-development.html"
+                  >Headless Commerce<br />&#038; CMS Development</a
+                >
+              </li>
+              <li class="menu-item">
+                <a href="custom-software-development.html"
+                  >Custom Software<br />Development</a
+                >
+              </li>
+              <li class="menu-item">
+                <a href="website-design-development.html"
+                  >Website Design<br />&#038; Development</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="work.html">Work</a></li>
+          <li class="menu-item"><a href="approach.html">Approach</a></li>
+          <li class="menu-item"><a href="notes.html">Notes</a></li>
+          <li class="menu-item"><a href="about.html">About</a></li>
+          <li class="menu-item"><a href="contact.html">Contact</a></li>
+          <li class="menu-theme-switcher menu-item">
+            <a href="#" class="theme-switcher-link"></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <header id="header">
+      <div class="container container-fluid">
+        <div class="row align-items-center">
+          <div class="col">
+            <a class="logo" href="index.html">
+              <img
+                class="dark-theme-only"
+                src="assets/images/logo-white.svg"
+                alt="Bilberrry"
+              />
+              <img
+                class="light-theme-only"
+                src="assets/images/logo-dark.svg"
+                alt="Bilberrry"
+              />
+            </a>
+          </div>
+          <div
+            class="col-mobile-controls col d-flex justify-content-end align-items-center"
+          >
+            <a
+              href="#"
+              class="mobile-menu-toggler hamburger hamburger--squeeze"
+            >
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </a>
+            <a href="#" class="theme-switcher-link mobile-only"></a>
+            <nav>
+              <div>
+                <ul id="menu-header-menu-1" class="menu">
+                  <li
+                    class="menu-item-services menu-item menu-item-has-children"
+                  >
+                    <a href="#">Services</a>
+                  </li>
+                  <li class="menu-item"><a href="work.html">Work</a></li>
+                  <li class="menu-item">
+                    <a href="approach.html">Approach</a>
+                  </li>
+                  <li class="menu-item"><a href="notes.html">Notes</a></li>
+                  <li class="menu-item"><a href="about.html">About</a></li>
+                  <li class="menu-item"><a href="contact.html">Contact</a></li>
+                  <li class="menu-theme-switcher menu-item">
+                    <a href="#" class="theme-switcher-link"></a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="content">
+      <div
+        id="hero-section"
+        class="hero-section bg-lazy bg-theme-switch lazy with-bg title-font-size-big with-small-text"
+        data-midnight="white"
+        data-src="assets/images/bb-sky2.webp"
+        data-img-theme-light="assets/images/bb-sky2.webp"
+        data-img-theme-dark="assets/images/bb-sky2.webp"
+      >
+        <img class="preloader" src="assets/images/bb-sky2-42x42.webp" alt="" />
+        <div class="hero-text-container">
+          <div class="small-text">
+            Your Trusted Website & App<br />Development Partner
+          </div>
+        </div>
+        <div>
+          <h1 class="main-title-tag">
+            Evolve Your Business<br />With Bilberrry<br />
+          </h1>
+        </div>
+      </div>
+
+      <style>
+        @media (max-width: 767px) {
+          #hero-section {
+            background-image: url(assets/images/bb-sky-mobile2.webp) !important;
+          }
+          .theme-dark #hero-section {
+            background-image: url(assets/images/bb-sky-mobile2.webp) !important;
+          }
+        }
+      </style>
+
+      <section id="id-691d62b45def5" class="container section-text">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="h6" style="text-align: center">WE ARE BILBERRRY</h2>
+            <p class="text-bigger" style="text-align: center">
+              We design and develop websites, apps, and digital experiences that
+              help clients grow, innovate, and transform. We listen, learn, and
+              understand before we build.
+            </p>
+          </div>
+        </div>
+      </section>
+      <style>
+        #id-691d62b45def5 {
+          max-width: 655px;
+          margin-top: 180px;
+          margin-bottom: 180px;
+        }
+        @media (max-width: 1024px) {
+          #id-691d62b45def5 {
+            margin-top: 50px;
+            margin-bottom: 40px;
+          }
+        }
+      </style>
+
+      <section class="section-logos">
+        <div class="relative">
+          <div class="mobile-carousel carousel">
+            <div class="slide-item">
+              <img
+                src="assets/images/delta-light.svg"
+                alt=""
+                class="light-theme-only"
+              />
+              <img
+                src="assets/images/delta-dark.svg"
+                alt=""
+                class="dark-theme-only"
+              />
+            </div>
+            <div class="slide-item">
+              <img
+                src="assets/images/university-dark.svg"
+                alt=""
+                class="light-theme-only"
+              />
+              <img
+                src="assets/images/university-light.svg"
+                alt=""
+                class="dark-theme-only"
+              />
+            </div>
+            <div class="slide-item">
+              <img
+                src="assets/images/gofundme.png"
+                alt=""
+                class="light-theme-only"
+              />
+              <img
+                src="assets/images/gofundme.png"
+                alt=""
+                class="dark-theme-only"
+              />
+            </div>
+            <div class="slide-item">
+              <img
+                src="assets/images/Harvard.svg"
+                alt=""
+                class="light-theme-only"
+              />
+              <img
+                src="assets/images/Harvard.svg"
+                alt=""
+                class="dark-theme-only"
+              />
+            </div>
+            <div class="slide-item">
+              <img
+                src="assets/images/BW_BBWeb.svg"
+                alt=""
+                class="light-theme-only"
+              />
+              <img
+                src="assets/images/BW_BBWeb.svg"
+                alt=""
+                class="dark-theme-only"
+              />
+            </div>
+          </div>
+          <nav class="carousel-pagination">
+            <button class="slick-prev"></button>
+            <button class="slick-next"></button>
+          </nav>
+        </div>
+      </section>
+
+      <section class="container two-columns-text">
+        <div class="row">
+          <div class="col-12 col-sm-7 col-title">
+            <h2 class="h3">
+              We Believe Great Work <br />Begins With Curiosity
+            </h2>
+          </div>
+          <div id="footer-cta" class="col-12 col-sm-5 col-text">
+            <div class="text">
+              <p>
+                Big transformations start with simple questions. Our clients
+                ask, we listen, and together we uncover the path forward.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CASE STUDIES -->
+      <section class="section-case-study">
+        <div class="inside img-pos-left">
+          <div class="split text">
+            <div>
+              <div class="sub-title">
+                <img
+                  class="light-theme-only"
+                  src="assets/images/BW-Logo-25-B.png"
+                  alt=""
+                />
+                <img
+                  class="dark-theme-only"
+                  src="assets/images/Logo-25.png"
+                  alt=""
+                />
+              </div>
+              <h4 class="h6">ASKED US:</h4>
+              <h2 class="style-quote">
+                What is the right way to transform our tech?
+              </h2>
+              <p>
+                Our favorite question. When you know what you need but aren’t
+                sure how to get there, we go all-in to uncover the approach that
+                will get your business where you want it to go.
+              </p>
+              <a href="work-business-wire.html" class="button"
+                >Here’s how we helped a global media brand modernize its tech
+                stack.</a
+              >
+            </div>
+          </div>
+          <div class="split image">
+            <div class="progressive-image">
+              <figure>
+                <picture class="master-image lazy">
+                  <data-src srcset="assets/images/BW.png 1x"></data-src>
+                  <data-src
+                    srcset="assets/images/BW-480x439.png 1x"
+                    media="(max-width:480px)"
+                  ></data-src>
+                  <data-img src="assets/images/BW.png"></data-img>
+                </picture>
+                <img
+                  class="placeholder"
+                  src="assets/images/BW-42x42.png"
+                  alt=""
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-case-study">
+        <div class="inside img-pos-right">
+          <div class="split text">
+            <div>
+              <div class="sub-title">
+                <img
+                  class="light-theme-only"
+                  src="assets/images/gofundme.png"
+                  alt=""
+                />
+                <img
+                  class="dark-theme-only"
+                  src="assets/images/GoFundMe-e1714426232722.png"
+                  alt=""
+                />
+              </div>
+              <h4 class="h6">WANTED TO KNOW:</h4>
+              <h2 class="style-quote">Can you enhance our web presence?</h2>
+              <p>
+                When it comes to digital experiences, we can build pretty much
+                anything. And if there’s a better solution, we’ll tell you.
+              </p>
+              <a href="work-gofundme.html" class="button"
+                >See what we designed for a global non-profit.</a
+              >
+            </div>
+          </div>
+          <div class="split image">
+            <div class="progressive-image">
+              <figure>
+                <picture class="master-image lazy">
+                  <data-src srcset="assets/images/GoFundMe.png 1x"></data-src>
+                  <data-src
+                    srcset="assets/images/GoFundMe-480x313.png 1x"
+                    media="(max-width:480px)"
+                  ></data-src>
+                  <data-img src="assets/images/GoFundMe.png"></data-img>
+                </picture>
+                <img
+                  class="placeholder"
+                  src="assets/images/GoFundMe-42x42.png"
+                  alt=""
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-case-study">
+        <div class="inside img-pos-left">
+          <div class="split text">
+            <div>
+              <div class="sub-title">
+                <img
+                  class="light-theme-only"
+                  src="assets/images/PPG-Logo-25-B.png"
+                  alt=""
+                />
+                <img
+                  class="dark-theme-only"
+                  src="assets/images/PPG-Logo-25.png"
+                  alt=""
+                />
+              </div>
+              <h4 class="h6">Wondered:</h4>
+              <h2 class="style-quote">Can one site support many missions?</h2>
+              <p>
+                By pairing thoughtful strategy with design that connects people
+                to causes, the answer is yes.
+              </p>
+              <a href="work-ppg.html" class="button"
+                >Explore how we crafted a scalable platform for public good.</a
+              >
+            </div>
+          </div>
+          <div class="split image">
+            <div class="progressive-image">
+              <figure>
+                <picture class="master-image lazy">
+                  <data-src srcset="assets/images/PPG.png 1x"></data-src>
+                  <data-src
+                    srcset="assets/images/PPG-480x437.png 1x"
+                    media="(max-width:480px)"
+                  ></data-src>
+                  <data-img src="assets/images/PPG.png"></data-img>
+                </picture>
+                <img
+                  class="placeholder"
+                  src="assets/images/PPG-42x42.png"
+                  alt=""
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-testimonials">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="main-title-tag">
+                THE REVIEWS ARE REAL (AND REALLY GOOD)
+              </h2>
+              <div class="desc-text">
+                <p>
+                  From startups to global organizations, our clients
+                  consistently rate us 5 stars for creativity, collaboration,
+                  and results.
+                </p>
+              </div>
+              <div class="cta-holder">
+                <a class="button cta-button" href="#" target="_blank"
+                  >Read our verified reviews</a
+                >
+              </div>
+
+              <div
+                class="carousel testimonials-carousel-wrapper testimonials-carousel-wrapper--three-items"
+                data-testimonials-count="3"
+              >
+                <div class="testimonials-carousel">
+                  <!-- Testimonial 1 -->
+                  <div class="testimonial-holder">
+                    <div class="testimonial-stars">
+                      <!-- Stars SVG simplified for brevity -->
+                      <span class="star">★</span><span class="star">★</span
+                      ><span class="star">★</span><span class="star">★</span
+                      ><span class="star">★</span>
+                    </div>
+                    <div class="testimonial-text">
+                      <p>
+                        &#8220;They approached the project not simply as
+                        developers, but as partners—invested in understanding
+                        our business.&#8221;
+                      </p>
+                    </div>
+                    <div class="testimonial-attribution">
+                      <span class="attribution-name"
+                        >Sands Investment Group</span
+                      ><span class="attribution-role"
+                        >Director of Operations</span
+                      >
+                    </div>
+                  </div>
+                  <!-- Testimonial 2 -->
+                  <div class="testimonial-holder">
+                    <div class="testimonial-stars">
+                      <span class="star">★</span><span class="star">★</span
+                      ><span class="star">★</span><span class="star">★</span
+                      ><span class="star">★</span>
+                    </div>
+                    <div class="testimonial-text">
+                      <p>
+                        “Bilberrry was an amazing partner throughout the whole
+                        process. They were also a pleasure to work with”
+                      </p>
+                    </div>
+                    <div class="testimonial-attribution">
+                      <span class="attribution-name">Snohomish County PUD</span
+                      ><span class="attribution-role"
+                        >Communications Director</span
+                      >
+                    </div>
+                  </div>
+                  <!-- Testimonial 3 -->
+                  <div class="testimonial-holder">
+                    <div class="testimonial-stars">
+                      <span class="star">★</span><span class="star">★</span
+                      ><span class="star">★</span><span class="star">★</span
+                      ><span class="star">★</span>
+                    </div>
+                    <div class="testimonial-text">
+                      <p>
+                        &#8220;In 18 years of working with many digital
+                        agencies, I never found an organization that was as
+                        effective as they are.&#8221;
+                      </p>
+                    </div>
+                    <div class="testimonial-attribution">
+                      <span class="attribution-name">The Life You Can Save</span
+                      ><span class="attribution-role"
+                        >Executive Director Emeritus</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <nav class="carousel-pagination">
+                  <button class="slick-prev" type="button"></button>
+                  <button class="slick-next" type="button"></button>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="items">
+                <div class="item-col col1">
+                  <div class="icon">
+                    <img
+                      class="light-theme-only lazy"
+                      data-src="assets/images/Bilberrry_Work_Think_L-e1592252351873.png"
+                      data-retina="assets/images/Bilberrry_Work_Think_L-2.png"
+                      alt=""
+                    />
+                    <img
+                      class="dark-theme-only lazy"
+                      data-src="assets/images/Bilberrry_Work_Think_D-e1592252031980.png"
+                      data-retina="assets/images/Bilberrry_Work_Think_D-2.png"
+                      alt=""
+                    />
+                  </div>
+                  <h3>WE THINK WITH YOU</h3>
+                  <div class="text">
+                    AI Enablement Strategy<br />Digital Product Strategy<br />Technology
+                    Architecture<br />Information Architecture
+                  </div>
+                </div>
+                <div class="item-col col2">
+                  <div class="icon">
+                    <img
+                      class="light-theme-only lazy"
+                      data-src="assets/images/Bilberrry_Work_Envision_L-e1592252361433.png"
+                      data-retina="assets/images/Bilberrry_Work_Envision_L-2.png"
+                      alt=""
+                    />
+                    <img
+                      class="dark-theme-only lazy"
+                      data-src="assets/images/Bilberrry_Work_Envision_D-e1592252046826.png"
+                      data-retina="assets/images/Bilberrry_Work_Envision_D-2.png"
+                      alt=""
+                    />
+                  </div>
+                  <h3>WE ENVISION WITH YOU</h3>
+                  <div class="text">
+                    Digital Product Design<br />UX Research & Design<br />Website
+                    & App Design<br />Brand Identity Design
+                  </div>
+                </div>
+                <div class="item-col col3">
+                  <div class="icon">
+                    <img
+                      class="light-theme-only lazy"
+                      data-src="assets/images/Bilberrry_Work_Build_L-e1592252369933.png"
+                      data-retina="assets/images/Bilberrry_Work_Build_L-2.png"
+                      alt=""
+                    />
+                    <img
+                      class="dark-theme-only lazy"
+                      data-src="assets/images/Bilberrry_Work_Build_D-e1592252076586.png"
+                      data-retina="assets/images/Bilberrry_Work_Build_D-2.png"
+                      alt=""
+                    />
+                  </div>
+                  <h3>WE BUILD WITH YOU</h3>
+                  <div class="text">
+                    Web App Development<br />eCom Development<br />CMS
+                    Development<br />Mobile App Development
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container two-columns-text">
+        <div class="row">
+          <div class="col-12 col-sm-7 col-title">
+            <h2 class="h3">We ask why, not what</h2>
+          </div>
+          <div id="footer-cta" class="col-12 col-sm-5 col-text">
+            <div class="text">
+              <p>
+                <span style="font-weight: 400"
+                  >When we agree to build something, we’re agreeing to build the
+                  future of your business. So we always start by asking:
+                  Why?</span
+                >
+              </p>
+            </div>
+            <a href="approach.html" class="button"
+              >Learn More About Our Approach</a
+            >
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="footer-push"></div>
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-sm-7">
+            <a class="logo" href="index.html">
+              <img
+                class="dark-theme-only"
+                src="assets/images/logo-white.svg"
+                alt="Bilberrry"
+              />
+              <img
+                class="light-theme-only"
+                src="assets/images/logo-dark.svg"
+                alt="Bilberrry"
+              />
+            </a>
+            <nav>
+              <ul id="menu-footer-menu" class="menu">
+                <li class="menu-item current-menu-item">
+                  <a href="index.html" aria-current="page">Home</a>
+                </li>
+                <li class="menu-item"><a href="work.html">Work</a></li>
+                <li class="menu-item"><a href="approach.html">Approach</a></li>
+                <li class="menu-item"><a href="notes.html">Notes</a></li>
+                <li class="menu-item"><a href="about.html">About</a></li>
+                <li class="menu-item"><a href="careers.html">Careers</a></li>
+                <li class="menu-item"><a href="contact.html">Contact</a></li>
+                <li class="menu-theme-switcher menu-item">
+                  <a href="#" class="theme-switcher-link"></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div id="footer-cta" class="col-6 col-sm-5">
+            <h2 class="h3">WANT TO WORK <br />WITH US?</h2>
+            <a href="contact.html" class="button">Get in touch</a>
+          </div>
+        </div>
+        <div id="bottom-bar" class="row">
+          <div class="col-sm-7">
+            <p>
+              © 2024 All Rights Reserved.
+              <a class="privacy" href="privacy-policy.html">Privacy Policy</a>
+            </p>
+          </div>
+          <div class="col-sm-5">
+            <p>Blueberry Technologies LLC DBA Bilberrry</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/jquery-migrate.js"></script>
+    <script src="assets/libs/lazy/jquery.lazy.min.js"></script>
+    <script src="assets/libs/lazy/jquery.lazy.picture.min.js"></script>
+    <script src="assets/libs/slick/slick.min.js"></script>
+    <script src="assets/js/imagesloaded.js"></script>
+    <script src="assets/libs/midnight/midnight.jquery.min.js"></script>
+    <script src="assets/js/jquery-ui-core.js"></script>
+    <script src="assets/js/jquery-ui-datepicker.js"></script>
+    <script src="assets/libs/jquery.cookie.js"></script>
+
+    <!-- MAIN THEME LOGIC -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
